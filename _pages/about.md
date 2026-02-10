@@ -32,6 +32,7 @@ My research focuses on security, fairness, and interpretability. I enjoy working
 I collaborate with **IBM Research** and work on challenges related to document forensics, fake content detection, and reliable deep learning systems.
 
 I’m always open to exploring new AI topics and collaborations 🚀
+Cheehehehehe
 
 When I'm not training models, I'm probably traveling, watching football, or climbing 😄
 
