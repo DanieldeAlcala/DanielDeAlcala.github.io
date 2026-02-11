@@ -21,19 +21,15 @@
 <div class="repo p-2 text-center">
   <a href="https://github.com/{{ include.username }}">
     <div class="card h-100 hoverable">
-      <div class="card-img-top">
+      <div class="card-img-top d-flex align-items-center justify-content-center p-3">
         <img
-          class="only-light w-100"
+          class="rounded-circle"
           alt="{{ include.username }}"
-          src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true"
+          src="https://github.com/{{ include.username }}.png"
           onerror="this.onerror=null;this.src='{{ '/assets/img/repo-placeholder.svg' | relative_url }}';"
-        >
-        <img
-          class="only-dark w-100"
-          alt="{{ include.username }}"
-          src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true"
-          onerror="this.onerror=null;this.src='{{ '/assets/img/repo-placeholder.svg' | relative_url }}';"
-        >
+          width="120"
+          height="120"
+        />
       </div>
       <div class="card-body">
         <h3 class="card-title">{{ include.username }}</h3>
