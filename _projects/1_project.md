@@ -14,4 +14,4 @@ AI-MINTest is an online demonstrator for Membership Inference Test. Visit the pr
 
 Related publications:
 
-{% cite dealcala2025mint %}
+- [MINT-Demo: Membership Inference Test Demonstrator]({{ '/assets/pdf/MINTDEMO.pdf' | relative_url }})

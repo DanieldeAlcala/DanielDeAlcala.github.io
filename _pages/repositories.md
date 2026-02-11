@@ -49,9 +49,15 @@ nav_order: 4
           {% endif %}
           {% if r.related_publications %}
             <p class="card-text"><strong>Related publications:</strong>
-            {% for pub in r.related_publications %}
-              {% cite {{ pub }} %}
-            {% endfor %}
+              <ul class="list-unstyled mb-0">
+              {% for pub in r.related_publications %}
+                {% if pub == 'dealcala2025AIdoc' %}
+                  <li><a href="{{ '/assets/pdf/DocAI.pdf' | relative_url }}">AIDoc (preprint PDF)</a></li>
+                {% else %}
+                  <li>{{ pub }}</li>
+                {% endif %}
+              {% endfor %}
+              </ul>
             </p>
           {% endif %}
         </div>
