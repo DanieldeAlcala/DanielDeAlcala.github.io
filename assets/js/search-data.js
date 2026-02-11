@@ -423,7 +423,17 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-ai-mintest",
+          title: 'AI-MINTest',
+          description: "AI-MINTest — Membership Inference Test. External project link.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-dp-garage-fun",
+          title: 'DP Garage (fun)',
+          description: "DP Garage — small hobby site and demo.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
