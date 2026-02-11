@@ -15,25 +15,25 @@
 - title: Education
   type: time_table
   contents:
-    - title: Ph.D. in AI, CV and Safety
+    - title: Ph.D. in Telecommunications and Computer Engineering
       institution: Universidad Autónoma de Madrid (UAM)
       year: Jan 2022 – Ongoing
       description:
-        - Funded by FPU Fellowship (Spanish National Programme for PhD Training)
-        - "Supervisors: Julian Fierrez and Aythami Morales"
+        - "Awarded the FPU Fellowship: Recipient of the most prestigious and competitive national grant for PhD training in Spain (Ministry of Science and Innovation)"
+        - "Advisors: Prof. Julian Fierrez and Prof. Aythami Morales"
     - title: M.Sc. in Deep Learning for Audio and Video Signal Processing
       institution: Universidad Autónoma de Madrid (UAM)
       year: Sept 2020 – Sept 2021
       description:
-        - "Final Project: Application for automatic registration of transited spaces for contact tracing using video signals from life-logging cameras"
+        - "Thesis: Deep Learning for Ego-centric Video Localization and Contact Tracing. Developed multi-user graph modeling and spatial registration algorithms for infectious disease tracking using life-logging cameras"
     - title: B.Sc. in Telecommunications Engineering
       institution: Universidad Autónoma de Madrid (UAM)
       year: Sept 2016 – Jun 2020
       description:
-        - "Final Project: Egocentric Biometric Palmprint Recognition for Virtual Reality Environments"
-        - Ranked 1st in class
-        - EPS Effort Award and Excellence Scholarship
-        - 8 courses with High Distinction
+        - "Academic Excellence: Ranked 1st in class (Top of the 2020 graduation cohort)"
+        - "Honors: Awarded 8 Academic Distinctions (Highest grade in course) and the EPS Effort Award for outstanding academic results in Engineering"
+        - "Scholarships: Recipient of the Excellence Scholarship"
+        - "Thesis: Egocentric Biometric Palmprint Recognition for VR. Designed a complete biometric authentication system and custom dataset for secure VR environments"
 
 - title: R&D Projects
   type: list
@@ -50,9 +50,9 @@
       institution: IBM Research, New York, USA
       year: Sept – Dec 2025
       description:
-        - "Research on AI-Generated Content Detection at document level"
-        - "Development of methods to identify, classify, and segment components of AI-generated documents"
-        - "Collaboration on state-of-the-art detection techniques and data creation"
+        - "Researched multi-modal end-to-end architectures for AI-Generated Content Detection, focusing on identifying and segmenting synthetic components (text, images, and tables) in digital documents"
+        - "Developed and open-sourced a generation framework for creating large-scale synthetic datasets to support robust model training and evaluation"
+        - "Authored a research paper and a patent proposal based on the developed methodology and framework"
 
 - title: Academic Duties
   type: nested_list
