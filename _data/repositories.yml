@@ -12,7 +12,7 @@ external_repos:
     description: Detector for AI-edited documents (anonymous pre-release, linked to AIDoc paper)
     related_publications:
       - dealcala2025AIdoc
-  - name: FakeDocFactory (anonymous)
+  - name: DocAIFactory (anonymous)
     url: https://anonymous.4open.science/r/FakeDocFactory-2472/README.md
     description: Tool to generate AI-edited documents (anonymous pre-release, linked to AIDoc paper)
     related_publications:

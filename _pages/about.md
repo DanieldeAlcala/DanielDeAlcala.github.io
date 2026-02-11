@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>PhD Researcher in AI & Computer Vision @ Univeresidad Autonoma de Madrid</a>. Danieldealcalavalcarcel@gmail.com
+subtitle: <a href='#'>PhD Researcher in AI, Computer Vision and Safety @ Universidad Autonoma de Madrid</a>. Danieldealcalavalcarcel@gmail.com
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>Madrid, Spain</p>
+  more_info: >
+    <p> Dani: living that Swiss mountain life.</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,8 +26,7 @@ latest_posts:
 ---
 
 
-I'm a Telecommunications Engineer and PhD researcher in **Artificial Intelligence**.  
-My research focuses on security, fairness, and interpretability. I enjoy working with different types of models and constantly exploring new challenges. Although my main background is in Computer Vision, I also work with LLMs, biometric data, and other AI modalities.
+I'm a Telecommunications Engineer and PhD in **Artificial Intelligence**.  My research focuses on Computer Vision and Safety. I work across multiple AI modalities, including computer vision, NLP, multimodal systems, and biometric data, and I’m particularly interested in exploring new challenges.
 
 I collaborate with **IBM Research** and work on challenges related to document forensics, fake content detection, and reliable deep learning systems.
 
