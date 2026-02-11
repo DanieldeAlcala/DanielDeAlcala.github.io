@@ -8,8 +8,8 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Madrid, Spain</p>
+  # more_info: >
+  #   <p>Madrid, Spain</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -32,7 +32,6 @@ My research focuses on security, fairness, and interpretability. I enjoy working
 I collaborate with **IBM Research** and work on challenges related to document forensics, fake content detection, and reliable deep learning systems.
 
 I’m always open to exploring new AI topics and collaborations 🚀
-Cheehehehehe
 
 When I'm not training models, I'm probably traveling, watching football, or climbing 😄
 
