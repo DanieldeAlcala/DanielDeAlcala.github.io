@@ -4,4 +4,16 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - https://github.com/DanieldeAlcala/Membership-Inference-Test
+  - DanieldeAlcala/Membership-Inference-Test
+
+external_repos:
+  - name: DocAIDetector (anonymous)
+    url: https://anonymous.4open.science/r/DocAIDetector-510E/README.md
+    description: Detector for AI-edited documents (anonymous pre-release, linked to AIDoc paper)
+    related_publications:
+      - dealcala2025AIdoc
+  - name: FakeDocFactory (anonymous)
+    url: https://anonymous.4open.science/r/FakeDocFactory-2472/README.md
+    description: Tool to generate AI-edited documents (anonymous pre-release, linked to AIDoc paper)
+    related_publications:
+      - dealcala2025AIdoc
