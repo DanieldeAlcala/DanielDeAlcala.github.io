@@ -428,9 +428,9 @@ ninja.data = [{
           description: "AI-MINTest — Membership Inference Test. External project link.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-dp-garage-fun",
-          title: 'DP Garage (fun)',
-          description: "DP Garage — small hobby site and demo.",
+            },},{id: "projects-dp-garage",
+          title: 'DP Garage',
+          description: "DP Garage — small hobby web.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{
