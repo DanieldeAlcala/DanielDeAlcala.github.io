@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "My published research. Hundreds of hours of work distilled into a few pages of &quot;simple&quot; PDFs.  yooooooooooooooooooooooooooooooooooooooooooooooooooooo",
+          description: "My published research. Hundreds of hours of work distilled into a few pages of &quot;simple&quot; PDFs.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Edit the `_data/repositories.yml` and change the `github_users` and `github_repos` lists to include your own GitHub profile and repositories.",
+          description: "A collection of research frameworks, deep learning experiments, and code that actually does what it’s told.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
