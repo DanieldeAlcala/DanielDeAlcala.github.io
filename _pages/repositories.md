@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: A collection of research frameworks, deep learning experiments, and code that actually does what it’s told.
+description: A collection of research frameworks, deep learning experiments, and code.
 nav: true
 nav_order: 4
 ---
