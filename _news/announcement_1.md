@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Just attended ICCV—an unforgettable experience where we presented 3 papers and I met incredibly interesting people, as always happens at these conferences :smile:
+Just attended ICCV, an unforgettable experience where we presented 3 papers and I met incredibly interesting people, as always happens at these conferences :smile:
 
