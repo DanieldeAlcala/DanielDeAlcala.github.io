@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -53,7 +53,7 @@ ninja.data = [{
           title: 'Paper “Is My Data in Your AI? Membership Inference Test (MINT) applied to...',
           description: "",
           section: "News",},{id: "news-just-attended-iccv-an-unforgettable-experience-where-we-presented-3-papers-and-i-met-incredibly-interesting-people-as-always-happens-at-these-conferences-smile",
-          title: 'Just attended ICCV—an unforgettable experience where we presented 3 papers and I met...',
+          title: 'Just attended ICCV, an unforgettable experience where we presented 3 papers and I...',
           description: "",
           section: "News",},{id: "news-completed-my-research-internship-at-ibm-research",
           title: 'Completed my Research Internship at IBM Research',
