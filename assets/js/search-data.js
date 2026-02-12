@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "My professional and academic record. The complete CV is available for download in PDF format by clicking the PDF icon.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -412,18 +412,18 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-paper-is-my-data-in-your-ai-membership-inference-test-mint-applied-to-face-biometrics-accepted-on-ieee-access",
+          title: 'Paper “Is My Data in Your AI? Membership Inference Test (MINT) applied to...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-just-attended-iccv-an-unforgettable-experience-where-we-presented-3-papers-and-i-met-incredibly-interesting-people-as-always-happens-at-these-conferences-smile",
+          title: 'Just attended ICCV—an unforgettable experience where we presented 3 papers and I met...',
+          description: "",
+          section: "News",},{id: "news-completed-my-research-internship-at-ibm-research",
+          title: 'Completed my Research Internship at IBM Research',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "projects-ai-mintest",
+            },},{id: "projects-ai-mintest",
           title: 'AI-MINTest',
           description: "AI-MINTest — Membership Inference Test. External project link.",
           section: "Projects",handler: () => {
@@ -452,14 +452,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/Daniel DeAlcala", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
+          window.open("https://www.linkedin.com/in/Daniel-DeAlcala", "_blank");
         },
       },{
         id: 'social-scholar',
