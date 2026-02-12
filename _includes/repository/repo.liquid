@@ -1,59 +1,43 @@
-{% assign repo_url = include.repository | split: '/' %}
-{% if site.data.repositories.github_users contains repo_url.first %}
-  {% assign show_owner = false %}
+{% assign repo = include.repository %}
+
+{% if repo.name %}
+  {% assign repo_name = repo.name %}
+  {% assign repo_url = repo.url %}
+  {% assign repo_desc = repo.description %}
+  {% assign related_pubs = repo.related_publications %}
 {% else %}
-  {% assign show_owner = true %}
-{% endif %}
-
-{% assign lang = site.lang | split: '-' | first %}
-
-{% case lang %}
-  {% when 'pt' %}
-    {% assign lang = site.lang %}
-
-  {% when 'zh' %}
-    {% assign lang_last = site.lang | split: '-' | last %}
-    {% case lang_last %}
-      {% when 'cn', 'sg', 'my', 'hans' %}
-        {% assign lang = 'cn' %}
-      {% when 'tw', 'hk', 'mo', 'hant' %}
-        {% assign lang = 'zh-tw' %}
-    {% endcase %}
-
-    {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
-{% endcase %}
-
-{% if site.data.repositories.repo_description_lines_max %}
-  {% assign max_lines = site.data.repositories.repo_description_lines_max %}
-{% else %}
-  {% assign max_lines = 2 %}
+  {% assign parts = repo | split: '/' %}
+  {% assign repo_name = parts[1] %}
+  {% assign repo_url = 'https://github.com/' | append: repo %}
+  {% assign repo_desc = nil %}
+  {% assign related_pubs = nil %}
 {% endif %}
 
 <div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.repository }}">
-    <div class="card h-100 hoverable">
-      <div class="card-img-top">
-        <img
-          class="only-light w-100"
-          alt="{{ include.repository }}"
-          src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-          onerror="this.onerror=null;this.src='{{ '/assets/img/repo-placeholder.svg' | relative_url }}';"
-        >
-        <img
-          class="only-dark w-100"
-          alt="{{ include.repository }}"
-          src="https://github-readme-stats.vercel.app/api/pin/?username={{ repo_url[0] }}&repo={{ repo_url[1] }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_owner={{ show_owner }}&description_lines_count={{ max_lines }}"
-          onerror="this.onerror=null;this.src='{{ '/assets/img/repo-placeholder.svg' | relative_url }}';"
-        >
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">{{ repo_url[1] }}</h3>
-        {% if show_owner %}
-          <p class="card-text text-muted">{{ repo_url[0] }}</p>
-        {% endif %}
-      </div>
+  <a href="{{ repo_url }}" target="_blank" rel="noopener noreferrer">
+    <div class="card h-100 hoverable p-3">
+      <h3 class="card-title">{{ repo_name }}</h3>
+      {% if repo_desc %}
+        <p class="card-text">{{ repo_desc }}</p>
+      {% endif %}
+      {% if related_pubs %}
+        <p class="card-text"><strong>Related publications:</strong>
+          <ul class="list-unstyled mb-0">
+          {% for pub in related_pubs %}
+            {% case pub %}
+              {% when 'dealcala2025AIdoc' %}
+                <li><a href="{{ '/assets/pdf/DocAI.pdf' | relative_url }}">AIDoc (preprint PDF)</a></li>
+              {% when 'dealcala2025active' %}
+                <li><a href="{{ '/assets/pdf/Active.pdf' | relative_url }}">aMINT (PDF)</a></li>
+              {% when 'dealcala2025my' %}
+                <li><a href="{{ '/assets/pdf/Is_My_Data.pdf' | relative_url }}">MINT (PDF)</a></li>
+              {% else %}
+                <li>{{ pub }}</li>
+            {% endcase %}
+          {% endfor %}
+          </ul>
+        </p>
+      {% endif %}
     </div>
   </a>
 </div>

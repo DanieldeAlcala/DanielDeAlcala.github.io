@@ -13,7 +13,4 @@ Since 2023, I have been a Teaching Assistant at the <a href="https://www.uam.es/
 	<a href="https://www.uam.es/eps/inicio" target="_blank" rel="noopener noreferrer">
 		<img src="{{ '/assets/img/eps.png' | relative_url }}" alt="EPS UAM" class="img-fluid" />
 	</a>
-	<p class="mt-2">
-		<a href="https://www.uam.es/eps/inicio" target="_blank" rel="noopener noreferrer">Visit the EPS page</a>
-	</p>
 </div>

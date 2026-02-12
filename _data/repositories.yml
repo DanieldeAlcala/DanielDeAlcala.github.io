@@ -4,7 +4,11 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - DanieldeAlcala/Membership-Inference-Test
+  - name: Membership-Inference-Test
+    url: https://github.com/DanieldeAlcala/Membership-Inference-Test
+    description: Membership Inference Test (MINT) for auditing model privacy.
+    related_publications:
+      - dealcala2025my
 
 external_repos:
   - name: DocAIDetector (anonymous)
