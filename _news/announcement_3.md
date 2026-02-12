@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2025-09-8
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Paper "Is My Data in Your AI? Membership Inference Test (MINT) applied to Face Biometrics" accepted on IEEE Access!

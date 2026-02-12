@@ -2,7 +2,7 @@
 layout: cv
 permalink: /cv/
 title: cv
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+description: My professional and academic record. The complete CV is available for download in PDF format by clicking the PDF icon.
 nav: true
 nav_order: 5
 cv_pdf: CV.pdf # you can also use external links here
