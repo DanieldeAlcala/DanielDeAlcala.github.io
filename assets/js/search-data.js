@@ -44,12 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-paper-is-my-data-in-your-ai-membership-inference-test-mint-applied-to-face-biometrics-accepted-on-ieee-access",
+        },{id: "news-paper-is-my-data-in-your-ai-membership-inference-test-mint-applied-to-face-biometrics-accepted-on-ieee-access",
           title: 'Paper “Is My Data in Your AI? Membership Inference Test (MINT) applied to...',
           description: "",
           section: "News",},{id: "news-just-attended-iccv-an-unforgettable-experience-where-we-presented-3-papers-and-i-met-incredibly-interesting-people-as-always-happens-at-these-conferences-smile",
