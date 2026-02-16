@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>PhD in AI, Computer Vision and Safety</a>. Danieldealcalavalcarcel@gmail.com
+subtitle: <a href='#'>PhD student in AI, Computer Vision and Safety</a>. Danieldealcalavalcarcel@gmail.com
 
 profile:
   align: right

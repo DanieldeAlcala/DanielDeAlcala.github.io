@@ -17,7 +17,7 @@ I've just completed my research internship at IBM Research with Dr. Pin-Yu Chen.
 <ul>
     <li>Researched multi-modal end-to-end architectures for AI-Generated Content Detection, focusing on identifying and segmenting synthetic components (text, images, and tables) in digital documents.</li>
     <li>Developed and open-sourced a generation framework for creating large-scale synthetic datasets to support robust model training and evaluation.</li>
-    <li>○ Authored a research paper and a patent proposal based on the developed methodology and framework</li>
+    <li>Authored a research paper and a patent proposal based on the developed methodology and framework</li>
 </ul>
 ---
 
