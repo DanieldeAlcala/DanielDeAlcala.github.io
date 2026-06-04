@@ -34,3 +34,5 @@ I’m always open to exploring new AI topics and collaborations 🚀
 
 When I'm not training models, I'm probably traveling, watching football, or climbing 😄
 
+- **Descarga:** [DocAI (PDF)](assets/pdf/DocAI.pdf)
+
