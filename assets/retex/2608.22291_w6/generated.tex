@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\newcommand{\qbinom}[2]{\genfrac[]{0pt}{}{#1}{#2}}
+
+\title{A Combinatorial Approach to the\\
+Stanley--Stembridge Positivity Conjecture}
+\author{Chenyang Zhao}
+\date{\today}
+
+\begin{document}
+\begin{theorem}[Pairing index--width theorem]\label{thm:pairing-index-width}
+For every $n\ge0$ and $a,b\ge0$, the number of partitions of $n$ having
+pairing index $a$ and pairing width $b$ equals the number of partitions of
+$n$ having exactly $a$ parts and largest part $b$.
+\end{theorem}
+
+\begin{proof}
+For $B\ge0$, we put
+\[
+  F_B(x,q)=\sum_{W(\lambda)\le B}x^{T(\lambda)}q^{|\lambda|}.
+\]
+We prove
+\begin{equation}\label{eq:FB}
+  F_B(x,q)=\frac{1}{(xq;q)_B}.
+\end{equation}
+The case $B=0$ is immediate.  We assume $B\ge1$.
+
+After maximal pairing, we write $\lambda$ uniquely as a paired portion
+$\pi$ and a distinct unpaired portion $\delta$: for each extracted pair
+$j+j$, we place one copy of $j$ in $\pi$, while $\delta$ consists of the
+parts left unpaired.  Then
+\[
+  |\lambda|=2|\pi|+|\delta|,
+  \qquad
+  T(\lambda)=\pi_1+s(\delta),
+\]
+with $\pi_1=0$ when $\pi$ is empty.  Moreover, the pair span is
+$2\ell(\pi)$.
+
+We set
+\[
+  m=\left\lfloor\frac{B}{2}\right\rfloor,
+  \qquad
+  h=\left\lfloor\frac{B-1}{2}\right\rfloor.
+\]
+The condition $W(\lambda)\le B$ is equivalent to the two independent
+conditions
+\[
+  \ell(\pi)\le m,
+  \qquad
+  \delta=\varnothing\text{ or }\delta_1-s(\delta)\le h.
+\]
+Consequently $F_B$ factors into a paired and an unpaired contribution.
+For the paired contribution, conjugating $\pi$ gives
+\[
+  \sum_{\ell(\pi)\le m}x^{\pi_1}q^{2|\pi|}
+  =
+  \frac{1}{(xq^2;q^2)_m}.
+\]
+By Lemma~, the unpaired contribution is
+\[
+  \frac{1}{(xq;q^2)_{h+1}}.
+\]
+Hence
+\[
+  F_B(x,q)
+  =
+  \frac{1}{(xq^2;q^2)_{\lfloor B/2\rfloor}(xq;q^2)_{\lfloor B/2\rfloor}}
+  =
+  \frac{1}{(xq;q)_B},
+\]
+which proves .
+
+The right-hand side is the generating function for partitions whose
+largest part is at most $B$, with $x$ marking the number of parts.  Thus
+\[
+  \#\{\lambda\vdash n:T(\lambda)=a,\ W(\lambda)\le B\}
+  =
+  \#\{\mu\vdash n:\ell(\mu)=a,\ \mu_1\le B\}.
+\]
+Subtracting the corresponding identity with $B-1$ in place of $B$ gives
+the assertion with pairing width and largest part both equal to $B$.
+\end{proof}
+\end{document}

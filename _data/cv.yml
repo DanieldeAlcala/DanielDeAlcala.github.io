@@ -17,23 +17,68 @@
   contents:
     - title: Ph.D. in Telecommunications and Computer Engineering
       institution: Universidad Autónoma de Madrid (UAM)
-      year: Jan 2022 – Ongoing
+      year: Jan 2022 – expected early 2027
       description:
-        - "Awarded the FPU Fellowship: Recipient of the most prestigious and competitive national grant for PhD training in Spain (Ministry of Science and Innovation)"
+        - "Thesis: Auditing Artificial Intelligence: Membership Inference and Methods for Transparent, Fair and Trustworthy AI"
         - "Advisors: Prof. Julian Fierrez and Prof. Aythami Morales"
+        - "Funded by an FPU fellowship (FPU21/05785), Spain's national 4-year predoctoral fellowship"
     - title: M.Sc. in Deep Learning for Audio and Video Signal Processing
       institution: Universidad Autónoma de Madrid (UAM)
       year: Sept 2020 – Sept 2021
       description:
-        - "Thesis: Deep Learning for Ego-centric Video Localization and Contact Tracing. Developed multi-user graph modeling and spatial registration algorithms for infectious disease tracking using life-logging cameras"
+        - "Thesis: egocentric video localization and multi-user graph modelling for contact tracing with life-logging cameras"
     - title: B.Sc. in Telecommunications Engineering
       institution: Universidad Autónoma de Madrid (UAM)
       year: Sept 2016 – Jun 2020
       description:
-        - "Academic Excellence: Ranked 1st in class (Top of the 2020 graduation cohort)"
-        - "Honors: Awarded 8 Academic Distinctions (Highest grade in course) and the EPS Effort Award for outstanding academic results in Engineering"
-        - "Scholarships: Recipient of the Excellence Scholarship"
-        - "Thesis: Egocentric Biometric Palmprint Recognition for VR. Designed a complete biometric authentication system and custom dataset for secure VR environments"
+        - "Ranked 1st in the graduating class"
+        - "8 Matrículas de Honor (top distinction, capped at 5% of each course)"
+        - "UAM Excellence Scholarship; EPS Effort Award"
+        - "Thesis: Egocentric Biometric Palmprint Recognition for VR"
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Visiting Researcher, Docling team (host Peter Staar)
+      institution: IBM Research – Zurich, AI for Knowledge. Zurich, Switzerland
+      year: Sep 2026 – Dec 2026
+      description:
+        - "Contributor to Docling, IBM's open-source document conversion toolkit (60K+ GitHub stars), working on several research projects around it"
+        - "Developing a VLM that links the fields of a form to their values"
+    - title: Visiting Researcher (host Pin-Yu Chen)
+      institution: IBM Research, MIT-IBM Watson AI Lab. New York, USA
+      year: Sep 2025 – Dec 2025
+      description:
+        - "Took AI-generated content detection from single images or text passages to whole documents. Built AIdocFactory, an open-source pipeline that parses PDFs with Docling, rewrites chosen paragraphs, figures and tables with any Hugging Face generative model, re-renders the page and records box-level labels. Used it to build a 35K-page benchmark from 2,000 arXiv papers"
+        - "Trained AIdocDetector, a 256M-parameter VLM that classifies each page and segments the edited regions: F1 of 0.83 on seen and unseen generators and Dice of 0.85–0.88, above GPT-5.2, Gemini 3 Flash and Claude Opus 4.5 prompted as detectors"
+        - "First-author paper in submission, journal extension in preparation; IBM filed a patent application on the method"
+    - title: PhD Researcher and FPU Fellow
+      institution: BiometricsAI Lab (formerly BiDA Lab), Universidad Autónoma de Madrid
+      year: Jan 2022 – present
+      description:
+        - "DeepID Challenge at ICCV 2025 (forged ID documents): designed and trained the UAM entry, TruFor fine-tuned with a SegFormer backbone and knowledge distillation. 1st of 26 teams on the private test set of 20K real ID documents, in both tracks, and 2nd overall in manipulation localization"
+        - "Introduced the Membership Inference Test (MINT): activation-based MINT reaches up to 90% accuracy on 22M+ face images (IEEE Access 2025); Active MINT stays above 80% from MobileNet to ViT (ICCV 2025); gMINT reaches near-perfect detection in most settings (CVPR-W 2025)"
+        - "Co-developed MINT for language models: 7 Transformer models and 2.5M sentences, AUC 0.85–0.99 (IEEE CAI 2026), and LoRA-fine-tuned LLMs, precision 0.77–0.92 across 4 models (preprint, 2026)"
+        - "Built <a href='https://ai-mintest.org'>ai-mintest.org</a>, a public web tool that runs these audits on image and text models (AAAI 2025 workshop demo; IEEE COMPSAC 2026)"
+        - "Other first-author work: AttZoom, a drop-in spatial attention layer for CNNs (ICCV-W 2025); N-Sigma, a statistical framework for measuring bias in AI models (IEEE COMPSAC 2023)"
+    - title: ReTeX, Independent Research Project
+      institution: Personal project
+      year: 2026 – present
+      description:
+        - "Training a vision-language model that turns images of document pages into LaTeX source, treating document conversion as image-to-code generation. Paper in preparation. <a href='/projects/retex/'>Project page</a>"
+
+- title: Awards
+  type: time_table
+  contents:
+    - title: 1st place of 26 teams, DeepID Challenge (both tracks)
+      institution: ICCV 2025
+      year: 2025
+    - title: FPU Fellowship (FPU21/05785)
+      institution: Spanish Ministry of Universities
+      year: 2022
+    - title: Ranked 1st in class, UAM Excellence Scholarship, EPS Effort Award
+      institution: Universidad Autónoma de Madrid
+      year: 2020
 
 - title: R&D Projects
   type: list
@@ -43,47 +88,38 @@
     - M2RAI through MICIU/FEDER under Grant PID2024-160053OB-I00
     - "Cátedra ENIA UAM-VERIDAS (NextGenerationEU) under Grant TSI-100927-2023-2"
 
-- title: International Research Stays
-  type: time_table
-  contents:
-    - title: Research Intern
-      institution: IBM Research, New York, USA
-      year: Sept – Dec 2025
-      description:
-        - "Researched multi-modal end-to-end architectures for AI-Generated Content Detection, focusing on identifying and segmenting synthetic components (text, images, and tables) in digital documents"
-        - "Developed and open-sourced a generation framework for creating large-scale synthetic datasets to support robust model training and evaluation"
-        - "Authored a research paper and a patent proposal based on the developed methodology and framework"
-
-- title: Academic Duties
+- title: Service and Teaching
   type: nested_list
   contents:
-    - title: Conference Reviewer
+    - title: Reviewer
       items:
-        - "Computer Vision and Pattern Recognition (CVPR): 2023, 2024, 2025"
-        - "Computer Vision and Pattern Recognition Workshops (CVPR Workshops): 2024, 2025"
-        - "Association for the Advancement of Artificial Intelligence Workshops (AAAI): 2025"
-        - "Neural Information Processing Systems (NeurIPS): 2025"
-        - "International Conference on Computer Vision (ICCV): 2025"
+        - "NeurIPS, ICML, ICLR, CVPR and ICCV (2023 – 2026)"
+        - "AAAI workshops and IEEE Transactions on Biometrics, Behavior, and Identity Science (T-BIOM)"
     - title: Teaching
       items:
-        - "Multimedia Signal Processing, B.Sc. in Telecommunications Engineering (2023-Present)"
+        - "Teaching assistant, Multimedia Signal Processing, B.Sc. in Telecommunications Engineering, UAM (2023 – present)"
 
 - title: Publications
   type: list
   contents:
-    - "[1] R. Daza, D. DeAlcala, A. Morales, R. Tolosana, R. Cobos, and J. Fierrez, ALEBk: Feasibility Study of Attention Level Estimation via Blink Detection applied to e-Learning, AAAI Workshop on Artificial Intelligence for Education (AI4EDU), 2022."
-    - "[2] I. Serna, D. DeAlcala, A. Morales, J. Fierrez, and J. Ortega-Garcia, IFBiD: Inference-Free Bias Detection, AAAI Workshop on Artificial Intelligence Safety (SafeAI), 2022."
-    - "[3] D. DeAlcala et al., BeCAPTCHA-Type: Biometric Keystroke Data Generation for Improved Bot Detection, in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPR), 2023, pp. 1051–1060."
-    - "[4] D. DeAlcala, I. Serna, A. Morales, J. Fierrez, and J. Ortega-Garcia, Measuring Bias in AI Models: An Statistical Approach Introducing N-Sigma, in 2023 IEEE 47th Annual Computers, Software, and Applications Conference (COMPSAC), 2023, pp. 1167–1172."
-    - "[5] D. DeAlcala, G. Mancera, A. Morales, J. Fierrez, R. Tolosana, and J. Ortega-Garcia, A Comprehensive Analysis of Factors Impacting Membership Inference, in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPR), 2024, pp. 3585–3593."
-    - "[6] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, and J. Ortega-Garcia, Is My Data in Your AI? Membership Inference Test (MINT) applied to Face Biometrics, IEEE Access, 2025."
-    - "[7] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, and R. Vera-Rodriguez, MINT Demo: Membership Inference Test Demonstrator, AAAI Workshop on Artificial Intelligence Governance (AIGOV), 2025."
-    - "[8] G. Mancera, D. DeAlcala, J. Fierrez, R. Tolosana, and A. Morales, Is My Text in Your AI Model? Gradient-based Membership Inference Test applied to LLMs, arXiv preprint arXiv:2503.07384, 2025."
-    - "[9] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, and R. Tolosana, gMINT: Gradient-based Membership Inference Test applied to Image Models, in Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPR), 2025, pp. 2781–2790."
-    - "[10] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, and J. Ortega-Garcia, Active Membership Inference Test (aMINT): Enhancing Model Auditability with Multi-Task Learning, in Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 647–656."
-    - "[11] D. DeAlcala, A. Morales, J. Fierrez, and R. Tolosana, AttZoom: Attention Zoom for Better Visual Features, in Proceedings of the IEEE/CVF International Conference on Computer Vision Workshops (ICCV), 2025, pp. 4834–4843."
-    - "[12] P. Korshunov et al., DeepID Challenge of Detecting Synthetic Manipulations in ID Documents, in Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), 2025, pp. 510–519."
-    - "[13] D. DeAlcala, K. Ching-Yun, A. Morales, J. Fierrez, R. Tolosana, and P.-Y. Chen, AIDoc: A Framework for Generating and Identifying AI-Edited Documents, in Under Review in International Conference on Machine Learning (ICML), 2026."
+    - "[1] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, J. Ortega-Garcia. Active Membership Inference Test (aMINT): Enhancing Model Auditability with Multi-Task Learning. ICCV 2025."
+    - "[2] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, J. Ortega-Garcia. Is My Data in Your AI? Membership Inference Test (MINT) Applied to Face Biometrics. IEEE Access, 2025."
+    - "[3] P. Korshunov, ..., D. DeAlcala, ... (34 authors). DeepID Challenge of Detecting Synthetic Manipulations in ID Documents. ICCV 2025."
+    - "[4] G. Mancera, D. DeAlcala, J. Fierrez, R. Tolosana, A. Morales. Is My Text in Your AI Model? Gradient-based Membership Inference Test Applied to LLMs. IEEE CAI 2026."
+    - "[5] D. DeAlcala*, G. Mancera*, J. Fierrez, A. Morales, R. Tolosana, R. Vera-Rodriguez. Is My Vision-Language Data in Your AI? Membership Inference Test (MINT) Demo 2. IEEE COMPSAC 2026."
+    - "[6] D. DeAlcala, I. Serna, A. Morales, J. Fierrez, J. Ortega-Garcia. Measuring Bias in AI Models: An Statistical Approach Introducing N-Sigma. IEEE COMPSAC 2023."
+    - "[7] D. DeAlcala, C.-Y. Ko, A. Morales, J. Fierrez, R. Tolosana, P.-Y. Chen. DocAI: Detecting and Localizing AI-Edited Content in Documents. Under review at ICLR 2027."
+    - "[8] G. Mancera, D. DeAlcala, A. Morales, J. Fierrez, R. Tolosana, F. Jurado. Auditing Training Data in Domain-adapted LLMs: LoRA-MINT. arXiv:2606.06946, 2026."
+    - "[9] M. Lopez-Duran, E. Marrero, J. Fierrez, M. Robledo-Moreno, R. Vera-Rodriguez, D. DeAlcala, A. Morales, R. Tolosana, O. Delgado, A. Ortigosa, J. Ortega-Garcia. Comparative Study of Domain-adapted VLMs for General Document Visual Question Answering. ICDAR 2026 Workshops."
+    - "[10] M. Lopez-Duran, J. Fierrez, A. Morales, D. DeAlcala, G. Mancera, J. Irigoyen, R. Tolosana, O. Delgado, F. Jurado, A. Ortigosa. CrimeNER Demo: Named-Entity Recognition in the Crime Domain. ICDAR 2026 Workshops."
+    - "[11] D. DeAlcala, A. Morales, J. Fierrez, R. Tolosana. AttZoom: Attention Zoom for Better Visual Features. ICCV 2025 Workshops."
+    - "[12] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana. gMINT: Gradient-based Membership Inference Test Applied to Image Models. CVPR 2025 Workshops."
+    - "[13] D. DeAlcala, A. Morales, J. Fierrez, G. Mancera, R. Tolosana, R. Vera-Rodriguez. MINT-Demo: Membership Inference Test Demonstrator. AAAI 2025 Workshop on AI Governance."
+    - "[14] G. Mancera, D. DeAlcala, A. Morales, R. Tolosana, J. Fierrez. Membership Inference Test: Auditing Training Data in Object Classification Models. AAAI 2025 Workshop on Deployable AI."
+    - "[15] D. DeAlcala, G. Mancera, A. Morales, J. Fierrez, R. Tolosana, J. Ortega-Garcia. A Comprehensive Analysis of Factors Impacting Membership Inference. CVPR 2024 Workshops."
+    - "[16] D. DeAlcala, A. Morales, R. Tolosana, A. Acien, J. Fierrez, S. Hernandez, M. A. Ferrer, M. Diaz. BeCAPTCHA-Type: Biometric Keystroke Data Generation for Improved Bot Detection. CVPR 2023 Workshops."
+    - "[17] I. Serna, D. DeAlcala, A. Morales, J. Fierrez, J. Ortega-Garcia. IFBiD: Inference-Free Bias Detection. AAAI 2022 Workshop on AI Safety (SafeAI)."
+    - "[18] R. Daza, D. DeAlcala, A. Morales, R. Tolosana, R. Cobos, J. Fierrez. ALEBk: Feasibility Study of Attention Level Estimation via Blink Detection Applied to e-Learning. AAAI 2022 Workshop on AI for Education."
 
 - title: Conference Participation
   type: list

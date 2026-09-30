@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+
+\title{NeuroSynth as a Continual Learner: \\ Scaling Out to Multi-Subject Inference \\ without Forgetting}
+
+\author{
+  Priyam Das$^{1}$, Alege ALiyu$^{2}$, Chetan Gohil$^{3}$, Roshan Shetty$^{3}$, \\
+  Ritoban Kundu$^{4}$, Anirban Nath$^{4}$ \\\\
+  $^{1}$Independent Researcher \quad
+  $^{2}$University of Minnesota \\[0.3em]
+  $^{3}$AIG Labs, India \quad
+  $^{4}$Indian Institute of Technology Kharagpur
+}
+
+\date{}
+
+\begin{document}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/fig3_task_b_retention.png}
+    \caption{Task B Retention Across Continual Learning Phases. Task B success rate expressed as a percentage of post-Task B baseline performance, measured after each training phase. Error bars indicate one standard deviation across six seeds.}
+    \label{fig:task_b_retention}
+\end{figure}
+
+\paragraph{NeuroSynth achieved improved Task C learning relative to EWC while simultaneously preserving earlier-task knowledge.}
+Final Task C performance reached 9.00\% for NeuroSynth compared to 2.00\% for EWC. Although this difference did not achieve statistical significance ($p = 0.226643$), the observed moderate effect size (Cohen's $d = 0.56$) suggests meaningful performance improvements. Collectively, these results demonstrate that NeuroSynth achieved improved balance between long-term retention and continued adaptation relative to both baseline methods.
+
+\section{Discussion}
+\end{document}
