@@ -1,0 +1,36 @@
+\documentclass[%
+ reprint,
+ superscriptaddress,
+ amsmath,amssymb,
+ aps,
+ pra,
+ floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}%
+\usepackage{bm}%
+\usepackage{hyperref}%
+
+\begin{document}
+Following polarisation control, the photons are either coupled directly into single-mode fibers for the desired experiment or redirected by a motorised flip mirror into a characterisation arm. The characterisation setups include a Hanbury-Brown and Twiss setup for second-order correlation measurements, and polarisation-analysis modules for quantum state tomography or the photons can be coupled into an external spectrometer. These characterisation instruments are interconnected using a polarisation-independent MEMS fiber switch, allowing flexible and remote-controllable routing of the collected photons.
+
+The entire collection setup is designed to maximise the single-mode fiber coupling and overall transmission efficiency. This is achieved by maintaining a compact optical layout and employing high-reflectivity and low-group-delay-dispersion (GDD) mirrors throughout the collection path. The low-GDD mirrors are particularly important for preserving the fidelity of polarisation-entangled photon pairs, as they minimise uncontrolled polarisation-dependent phase shifts introduced upon reflection. In addition, the collection floor incorporates a CCD camera for sample imaging and optical alignment. The beam is directed to the camera by a mirror mounted on an automated linear translation stage.
+
+\section{Optical and quantum optical measurements}
+
+In order to demonstrate state-of-the-art operation of the transportable setup as a source of single- and polarisation-entangled photon pairs in the telecom C-band, InAs/GaAs quantum dots have been used as sources of quantum light. Thanks to a metamorphic buffer layer, the strain is engineered to enable emission in the telecom C-band~. To increase the source brightness, QDs have been realized within a planar $\lambda$-cavity structure, which consists of two Distributed Bragg Reflector (DBR) stacks: a bottom AlAs/GaAs DBR, and a top dielectric DBR composed of alternating SiO$_2$/TiO$_2$ layers, as in Ref.~ and schematically shown in the inset of Fig.~ a).
+
+\subsection{Single-photon emission}
+
+The optical setup was first characterised using a quantum dot operated under LA-phonon-assisted excitation~. This excitation scheme enables efficient spectral suppression of the excitation laser while providing high robustness against excitation-laser power fluctuations and a low multi-photon emission probability~. These properties are particularly important for the implementation of quantum-dot single-photon sources in deployed quantum communication and quantum cryptography protocols~.
+
+A quantum-dot transition at a wavelength of 1543\,nm, further referred to as QD-LA, was excited by a laser spectrally blue detuned by 1.5\,nm from the transition (see inset of Fig.~ b)), and operated at a repetition rate of 76\,MHz. The emission spectrum of QD-LA after the full suppression of the excitation laser is shown in Fig.~ a).
+
+The measured dependence of the single-photon count rate on the excitation power exhibits the characteristic behaviour of LA phonon-assisted excitation, reaching a saturation plateau at higher excitation powers (Fig.~ b)). The normalized single-photon count rate was extracted from the second-order correlation measurements. At saturation, a count rate of 1.3\,Mcps was measured in the single-mode fiber-coupled main collection port, corresponding to an overall end-to-end system efficiency of approximately 2\%.
+
+The single-photon nature of the emission was verified by measuring the second-order correlation function, $g^{(2)}(\tau)$. At saturation, the zero-delay value was measured to be $g^{(2)}(0) = 0.056 \pm 0.007$, confirming strong suppression of residual excitation laser (see Fig.~ c)). This value can be further reduced by optimising the excitation conditions, particularly the spectral detuning and excitation power~. For example, at an excitation power corresponding to 75\% of the saturation power, a value of $g^{(2)}(0) = 0.031 \pm 0.002$ was obtained, demonstrating an even lower multi-photon probability at the expense of a single-photon count rate reduced to 86\% of its saturation value. The QD-LA's emission shows pronounced blinking; see the supplementary information. The QD-LA was active for 60.9\% of the time.
+
+\subsection{Entangled-photon pair emission}
+
+A second QD located on a second chip of a similar design (where instead the bottom DBR is semiconductor, while the top oxide-based DBR has lower reflectivity), hereafter referred to as QD-TPE, was investigated under TPE. This excitation scheme enables the generation of polarisation-entangled photon pairs through the biexciton-exciton radiative cascade~. Such entangled photon pairs represent a fundamental resource for entanglement-based quantum cryptography protocols as well as for entanglement swapping, which is a key building block of photonic quantum repeaters. Furthermore, resonant TPE leads to emission of photons with an ultra-low multi-photon contribution~, which is essential for secure quantum communication, particularly for long communication distances and in mistrustful quantum cryptographic protocols~.
+\end{document}

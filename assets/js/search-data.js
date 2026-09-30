@@ -55,6 +55,17 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
+            },},{id: "news-a-busy-2026-so-far-tada-papers-at-ieee-cai-2026-gradient-based-mint-for-llms-ieee-compsac-2026-mint-demo-2-now-for-vision-language-data-and-two-at-the-icdar-2026-workshops-plus-the-lora-mint-preprint",
+          title: 'A busy 2026 so far :tada: Papers at IEEE CAI 2026 (gradient-based MINT...',
+          description: "",
+          section: "News",},{id: "news-starting-a-research-stay-at-ibm-research-zurich-with-the-docling-team-sep-dec-2026-mountain",
+          title: 'Starting a research stay at IBM Research – Zurich with the Docling team...',
+          description: "",
+          section: "News",},{id: "projects-retex",
+          title: 'ReTeX',
+          description: "From the image of a document page to LaTeX that compiles back into the same page. Personal research project, work in progress.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/retex/";
             },},{id: "projects-ai-mintest",
           title: 'AI-MINTest',
           description: "AI-MINTest — Membership Inference Test. External project link.",
@@ -91,7 +102,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=https://scholar.google.es/citations?user=oAUImYwAAAAJ&hl=es", "_blank");
+          window.open("https://scholar.google.com/citations?user=oAUImYwAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',

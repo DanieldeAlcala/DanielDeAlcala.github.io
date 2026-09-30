@@ -1,0 +1,29 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  citecolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\title{State-Conditional Gaussian Process Regression for Sparse Shock Wave Detection and Transport Modeling}
+\author{Hadi Pourrahmani\thanks{Corresponding author: \href{mailto:hadipourrahmani@pricemail.com}{hadipourrahmani@pricemail.com}}\\
+\textit{Department of Mechanical and Industrial Engineering}\\
+\textit{University of Massachusetts Amherst, Amherst, MA 01003, USA}}
+\date{\today}
+
+\begin{document}
+The same issue has recently emerged in continuum flow compression. Shenoy and Frankel  fit localized Gaussian primitives independently to three-dimensional Taylor--Green velocity snapshots and evaluate vorticity, enstrophy, spectra, anisotropy, and scale separation. Their Gaussian codec is intentionally a snapshot representation: it does not condition one Gaussian model on time and does not test interpolation or extrapolation from one flow stage to another. The present work advances that foundation in five directions. It represents a positive four-dimensional phase-space distribution rather than only a three-dimensional velocity field; regenerates heat flux, stress, and higher kinetic moments by the original DVM quadrature rather than only spatial derivatives; shares one correspondence-preserving conditional model across nine shock strengths; withholds complete kinetic states and tests matched-budget global and local Mach maps; and adds a 20-channel wall-bounded rarefied-flow representation with matched-storage bilinear and singular-value-decomposition (SVD) controls. Gaussian primitives have also become prominent in continuous scene and signal representations, while reduced-order fluid modeling has long relied on proper orthogonal decomposition (POD), SVD, and projection methods.
+
+High-dimensional kinetic equations have additionally motivated dynamical low-rank and tensor representations that reduce the cost of evolving phase-space solutions, as well as neural sparse representations that combine continuous spatial models with low-rank velocity factors. Learned kinetic solvers have also targeted the expensive collision step through data-driven corrections to Bhatnagar--Gross--Krook (BGK) relaxation, accelerated neural collision operators, and structure-preserving relaxation networks. Those approaches primarily reduce kinetic-equation solution cost. The present work addresses a complementary database problem: a converged kinetic state is converted into a positive, continuously queryable representation whose moment errors are evaluated with the same quadrature as the reference solver. This distinction motivates coefficient-matched storage comparisons rather than time-integration speed comparisons.
+
+The work is complementary to operator learning. Deep operator networks (DeepONets), Fourier neural operators, and rarefied-flow surrogates aim to map problem inputs to solutions. Within rarefied-gas dynamics, physics-informed neural networks (PINNs) have solved forward and inverse BGK problems and Poiseuille flow, inferred effective viscosity, and learned microflows from direct simulation Monte Carlo (DSMC) data across Knudsen number. Recent neural surrogates have also addressed micro-step flow, shock waves, cavities, and hypersonic configurations. A fitted representation instead converts one or several converged kinetic states into a compact differentiable database object. Here fitted-state reconstruction, complete-state holdouts, and range screening are reported as three distinct measures of fidelity. Conditioning on Mach number then tests whether the localized representation can be shared across states while retaining the same transport-based evaluation contract.
+\end{document}
