@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "Some of my project sites. Because life is too short to only look at GitHub repos, these actually have a face!",
+          description: "Research projects and a few things I built along the way.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -31,7 +31,7 @@ ninja.data = [{
             window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
-          title: "cv",
+          title: "CV",
           description: "My professional and academic record. The complete CV is available for download in PDF format by clicking the PDF icon.",
           section: "Navigation",
           handler: () => {
@@ -66,14 +66,19 @@ ninja.data = [{
           description: "From the image of a document page to LaTeX that compiles back into the same page. Personal research project, work in progress.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/retex/";
+            },},{id: "projects-docai",
+          title: 'DocAI',
+          description: "Detecting and localizing AI-edited content in documents. Under review at ICLR 2027.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_docai/";
             },},{id: "projects-ai-mintest",
           title: 'AI-MINTest',
-          description: "AI-MINTest — Membership Inference Test. External project link.",
+          description: "A public web tool that checks whether given images or texts were used to train an AI model.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-dp-garage",
           title: 'DP Garage',
-          description: "DP Garage — small hobby web.",
+          description: "A small web project of mine, outside research.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{

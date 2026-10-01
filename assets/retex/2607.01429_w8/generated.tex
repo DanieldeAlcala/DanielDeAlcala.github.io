@@ -1,37 +1,47 @@
 \documentclass[11pt]{article}
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{setspace}
-\usepackage{mathtools}
-\usepackage{bm}
-\usepackage{float}
 
-\geometry{margin=1in}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{setspace}
 \onehalfspacing
 
-\title{When Do Correlation and Causal Forests Differ?}
-\author{Martin Huber\\
-\small {University of Fribourg, Department of Economics} \smallskip }
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+\usepackage{graphicx}
+
+\bibliographystyle{plainnat}
+
+\title{Multivariate fixed-set identifiability of the two-stage structural model in randomized controlled trials}
+
+\author{
+  Fabian Schei\orcidlink{0000-0002-3600-4000}*,
+  \v{S}IMON JELINEK\orcidlink{0000-0002-0036-7996}*,
+  MAJA BOJAR-MARI\v{S}ENEC\orcidlink{0000-0002-6705-7587}
+  \\
+  \small \textit{Institute of Mathematics, University of Ljubljana}
+  \\
+  \small \texttt{fabian.schei@um.si}, \texttt{simon.jelinek@um.si}, \\
+  \small \texttt{maja.bojarmarsenec@um.si}
+}
+
+\date{}
 
 \begin{document}
 \section{The underlying idea: multivariate fixed-set iterations}\label{sec:idea}
 
-\subsection{The idea in the univariate case}\label{sec:idea_uni}
+\subsection{The idea in the univariate case}
 
-The intuition for identification of the univariate version of model  follows the idea from . The univariate model is the one where all variables, observable and unobseervable, are univariate and where both $m$ and $h$ satisfy the rank-invariance condition in their second argument, i.e.\ they are strictly increasing and continuous functions in $\varepsilon$ and $U$, respectively. 
+The intuition for identification of the univariate version of model  follows the idea from . The univariate model is the one where all variables, observable and unobservable, are univariate and where both $m$ and $h$ satisfy the rank-invariance condition in their second argument, i.e.\ they are strictly increasing and continuous functions in $\varepsilon$ and $U$, respectively.
 
-$m(X,\varepsilon)$ in model  maps the distribution $F_\varepsilon$ of the unobservable to the conditional \textit{counterfactual} distribution $F_{Y(X)}$ for \textit{exogenous} $X$, i.e.\ for an $X$ with $X\perp\varepsilon$. The notation $F_{Y(X)}$ is Rubin's counterfactual notation : due to the endogeneity problem, i.e.\ the fact that $X$ and $\varepsilon$ are not independent, $F_{Y(X)}$ is unobservable and the observable distribution $F_{Y|X}$ does not coincide with $F_{Y(X)}$. In order to identify $m$, we would need to know $F_{Y(X)}$, i.e.\ we want to know how the model would behave for a change in $X$ that does not affect the distribution of $\varepsilon$.
+$m(X,\varepsilon)$ in model  maps the distribution $F_\varepsilon$ of the unobservable to the conditional \emph{counterfactual} distribution $F_{Y(X)}$ for \emph{exogenous} $X$, i.e.\ for an $X$ with $X \perp \varepsilon$. The notation $F_{Y(X)}$ is Rubin's counterfactual notation ; due to the endogeneity problem, i.e.\ the fact that $X$ and $\varepsilon$ are not independent, $F_{Y(X)}$ is unobservable and the observable distribution $F_{Y|X}$ does not coincide with $F_{Y(X)}$. In order to identify $m$, we would need to know $F_{Y(X)}$, i.e.\ we want to know how the model would behave for a change in $X$ that does not affect the distribution of $\varepsilon$.
 
 The idea is to vary $Z$ in such a way that $X$ varies but $\varepsilon$ stays constant. The fact that this is possible if $Z$ is only binary was first shown in  and . The argument rests on the fact that using the binary instrument $Z$ with realizations $z$ and $z'$, there are two maps that do not change the distribution $F_\varepsilon$ of $\varepsilon$, but change values of $X$. This hence captures the exogenous effect of $X$ on $Y$. These two maps are depicted in Figure .
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{figures/fig1.pdf}
-    \caption{Fixed-point iteration in a univariate framework.}
-    \label{fig:fig1}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{fig1.pdf}
+\caption{Fixed-point iteration in a univariate framework.}
+\label{fig:fixed-point}
 \end{figure}
 
-The first map changes $z\mapsto z'$ for a fixed $x$, i.e.\ switches the distributions $F_{X|Z=z}(x)$ and $F_{X|Z=z'}(x)$ (the ``vertical'' map in Figure ). The fact that $F_{\varepsilon|X,Z}$ is not affected by this follows from the classical control variable approach  and because $Z$ has no effect on $m$ due to the exclusion restriction of $Z$. A control variable $V$ is such that $X\perp\varepsilon|V$ and can be constructed via $V=F_{X|Z}(X)$ . In particular, it contains the same information as the unobservable $U$. Hence, by conditioning on $V$ and the fact that $Z$ is independent of $(\varepsilon,U)$, the vertical shift changes $Z$ but does not change $X$, which therefore does not affect the function $m(x,\varepsilon)$ we want to identify .
+The first map changes $z \mapsto z'$ for a fixed $x$, i.e.\ switches the distributions $F_{X|Z=z}(x)$ and $F_{X|Z=z'}(x)$ (the ``vertical'' map in Figure ). The fact that $F_{\varepsilon|X,Z}$ is not affected by this follows from the classical control variable approach and because $Z$ has no effect on $m$ due to the exclusion restriction of $Z$. A control variable $V$ is such that $X \perp \varepsilon|V$ and can be constructed via $V = F_{X|Z}(X)$ . In particular, it contains the same information as the unobservable $U$. Hence, by conditioning on $V$ and the fact that $Z$ is independent of $(\varepsilon,U)$, the vertical shift changes $Z$ but does not change $X$, which therefore does not affect the function $m(x,\varepsilon)$ we want to identify .
 \end{document}

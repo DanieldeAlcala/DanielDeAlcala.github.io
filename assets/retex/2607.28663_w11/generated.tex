@@ -1,34 +1,41 @@
 \documentclass[11pt]{article}
-
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{caption}
+\usepackage{float}
 
-\title{NeuroSynth as a Continual Learner: \\ Scaling Out to Multi-Subject Inference \\ without Forgetting}
+\title{NeuroSynth: From Neural Models to Behavioral Effects}
 
 \author{
-  Priyam Das$^{1}$, Alege ALiyu$^{2}$, Chetan Gohil$^{3}$, Roshan Shetty$^{3}$, \\
-  Ritoban Kundu$^{4}$, Anirban Nath$^{4}$ \\\\
-  $^{1}$Independent Researcher \quad
-  $^{2}$University of Minnesota \\[0.3em]
-  $^{3}$AIG Labs, India \quad
-  $^{4}$Indian Institute of Technology Kharagpur
+\begin{tabular}{c}
+Aakanksha Sinha$^{1,2,*}$, Bhairavi Murali$^{1,*}$, \\
+Fabian Pedregosa$^{3}$, Rajкатan Bi$^{1}$, Chenqiao Xu$^{1}$, \\
+Force Yim$^{1}$, Liang Zha$^{1}$, S\'andor Papp$^{4}$, \\
+Nagendra Hosur$^{1}$, Pratik Gajane$^{1}$, \\
+Suneetha Murali$^{5}$, Pratik Deshmukh$^{1}$, \\
+Xiaodong Sun$^{1}$, Pratik Sonawane$^{1}$, \\
+\textbf{Sushmita Doniach$^{1,6}$}\thanks{Corresponding author: \texttt{sushmita.doniach@rutgers.edu}} \\
+\end{tabular}
+\\[3pt]
+\small $^{1}$Department of Psychiatry, Rutgers University-Camden, Camden, NJ, USA\\
+\small $^{2}$Neuroimaging-Neuroimaging and Computational Neuroscience, Toulouse School of Economics, Toulouse, France\\
+\small $^{3}$Neuroimaging-Neuroimaging and Computational Neuroscience, Toulouse School of Economics, Toulouse, France\\
+\small $^{4}$Neuroimaging-Neuroimaging, Institut des Sciences Neurologiques de Paris (INSP), Paris, France\\
+\small $^{5}$Institute of Brain and Behavior, University of Orl\'eans, Orl\'eans, France\\
+\small $^{6}$Brigantine Department of Biomedical Sciences and Health, Università degli Studi di Torino, Torino, Italy\\
 }
-
 \date{}
 
 \begin{document}
-\begin{figure}[t]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/fig3_task_b_retention.png}
+    \includegraphics[width=0.9\linewidth]{figures/task_b_retention.png}
     \caption{Task B Retention Across Continual Learning Phases. Task B success rate expressed as a percentage of post-Task B baseline performance, measured after each training phase. Error bars indicate one standard deviation across six seeds.}
     \label{fig:task_b_retention}
 \end{figure}
 
-\paragraph{NeuroSynth achieved improved Task C learning relative to EWC while simultaneously preserving earlier-task knowledge.}
-Final Task C performance reached 9.00\% for NeuroSynth compared to 2.00\% for EWC. Although this difference did not achieve statistical significance ($p = 0.226643$), the observed moderate effect size (Cohen's $d = 0.56$) suggests meaningful performance improvements. Collectively, these results demonstrate that NeuroSynth achieved improved balance between long-term retention and continued adaptation relative to both baseline methods.
+NeuroSynth achieved improved Task C learning relative to EWC while simultaneously preserving earlier-task knowledge. Final Task C performance reached 9.00\% for NeuroSynth compared to 2.00\% for EWC. Although this difference did not achieve statistical significance ($p = 0.226643$), the observed moderate effect size (Cohen's $d = 0.56$) suggests meaningful performance improvements. Collectively, these results demonstrate that NeuroSynth achieved improved balance between long-term retention and continued adaptation relative to both baseline methods.
 
 \section{Discussion}
 \end{document}
