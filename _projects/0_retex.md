@@ -2,7 +2,7 @@
 layout: page
 title: ReTeX
 description: From the image of a document page to LaTeX that compiles back into the same page. Personal research project, work in progress.
-img:
+img: assets/img/projects/retex.jpg
 importance: 0
 category: work
 permalink: /projects/retex/
@@ -46,20 +46,18 @@ _styles: >
 
 **ReTeX** reads the **image** of a document page and writes **LaTeX code that compiles back into that page**: the same text, equations, tables and figures, in the same place, with the same fonts and margins. Document conversion becomes an image-to-code problem, and the LaTeX compiler is the judge.
 
-This is a personal research project. The results below come from the latest model, evaluated on **400 real arXiv pages from papers submitted between July and September 2026**, after every paper the model was trained on.
+This is a personal research project. The results below come from the current model, evaluated on **400 real arXiv pages from papers submitted between July and September 2026**, after every paper the model was trained on.
 
 <div class="rx-kpis">
-  <div class="rx-kpi"><b>0.79</b><span>mean page fidelity (fid_v3, 0–1), counting pages that fail to compile as 0</span></div>
-  <div class="rx-kpi"><b>0.91</b><span>median page fidelity</span></div>
-  <div class="rx-kpi"><b>362 / 400</b><span>outputs compile with no manual fixes</span></div>
-  <div class="rx-kpi"><b>+0.10</b><span>over the previous model on the same pages (95% CI +0.06 to +0.14)</span></div>
+  <div class="rx-kpi"><b>0.74</b><span>mean page fidelity (0–1), counting pages that fail to compile as 0</span></div>
+  <div class="rx-kpi"><b>0.92</b><span>median page fidelity</span></div>
+  <div class="rx-kpi"><b>329 / 400</b><span>outputs compile with no manual fixes</span></div>
+  <div class="rx-kpi"><b>0.94</b><span>median fidelity of the pages that compile</span></div>
 </div>
 
-## Why LaTeX, and why the rendered page
+## Why LaTeX
 
-Most document converters output plain text, Markdown or a JSON tree. These formats lose what makes a page a page: equations stop being math, tables lose their spans, and the layout disappears. LaTeX keeps all of it, and it can be compiled.
-
-The same page can be written in many different ways in LaTeX, so comparing the generated code with the original source would punish valid answers. ReTeX is therefore judged on what the code **produces**: the candidate is compiled, and its page is compared with the input.
+Most document converters output plain text, Markdown or a JSON tree, and lose what makes a page a page: equations stop being math, tables lose their structure and the layout disappears. LaTeX keeps all of it, and it can be compiled. Since the same page can be written in many different ways, ReTeX is judged on what its code **produces**, not on the code itself.
 
 ## How it works
 
@@ -75,52 +73,31 @@ The same page can be written in many different ways in LaTeX, so comparing the g
   <path class="arrow" d="M626,60 H666" marker-end="url(#rxa)"/>
   <rect class="box" x="670" y="30" width="120" height="60" rx="6"/><text x="730" y="57" text-anchor="middle">Rendered page</text><text class="sub" x="730" y="75" text-anchor="middle">PDF</text>
   <path class="arrow" d="M730,90 V125 H64 V92" marker-end="url(#rxa)" stroke-dasharray="4 4"/>
-  <text class="sub" x="397" y="142" text-anchor="middle">compared with the input page: fid_v3</text>
+  <text class="sub" x="397" y="142" text-anchor="middle">compared with the input page</text>
 </svg>
 
-- **Model.** Qwen3-VL-8B fine-tuned with LoRA. The model writes the whole document, from `\documentclass` to `\end{document}`, in one pass.
-- **Training data.** Two sources:
-  - a **programmatic generator** that samples a structured page description (about 30 style axes, plus a sequence of sections, paragraphs, equations, lists, tables and figures), turns it into LaTeX and keeps it only if it compiles;
-  - about **59,000 real arXiv pages**, each paired with a one-page LaTeX source that reproduces the image exactly. Their preambles are rewritten into a canonical form that renders identically.
-- **Real figures.** Photos and plots cannot be written as code. The evaluation supplies the page's own image files, and the model only has to decide where each figure goes and how big it is.
+- **Model.** Qwen2.5-VL-3B fine-tuned with LoRA. It writes the whole document, from `\documentclass` to `\end{document}`, in one pass.
+- **Training data.** Synthetic pages from a programmatic generator that samples layouts, fonts and content and keeps only what compiles, plus about 59,000 real arXiv pages paired with LaTeX that reproduces them exactly.
+- **Figures.** Photos and plots cannot be written as code, so the model only decides where each figure goes and how big it is.
 
 ## How it is measured
 
-**fid_v3** is a page-fidelity metric built for this project. It works on the compiled PDF, not on pixels:
+Both the original page and the model's output are compiled, and **fid_v3**, a metric built for this project, compares them: it lists every visible word, image and line on each page, aligns them, and splits the error into content, graphics, geometry, placement and style. A perfect copy scores 1 and a page that does not compile scores 0.
 
-1. Both PDFs are turned into an inventory of what is **visible**: every word (with its position, font, size and style), every image and every vector stroke.
-2. The two inventories are aligned.
-3. The loss is split into 14 costs grouped in five families: **content** (missing, invented or wrong text), **graphics**, **geometry** (paper, margins, scale), **placement** (where things land) and **style** (fonts, colour).
-
-A perfect copy scores 1, a page that does not compile scores 0, and garbage scores close to 0. The headline number, **fid_v3_all**, is the mean over all pages with failures counted as 0, so it rewards models that both compile and reproduce the page. Before it was adopted, the metric was checked against blind human judgments, using a protocol registered before the analysis.
-
-**The benchmark.** `realbench_v1` holds 400 pages from 400 arXiv papers submitted between 2 July and 24 September 2026. All training data comes from papers up to June 2026, so the model has never seen these papers. Pages are grouped into four structural bands:
-
-| Band | What it contains | Pages |
-|---|---|---:|
-| B1 | one column, no floats, default margins | 111 |
-| B2 | one column, no floats, custom page geometry | 169 |
-| B3 | one column with figures or tables | 47 |
-| B4 | two columns | 73 |
+The benchmark holds 400 pages from 400 arXiv papers submitted between July and September 2026, so the model has never seen any of them.
 
 ## Results
 
-The latest model compared with the previous one (Qwen2.5-VL-3B), on the same 400 pages and with the same generation protocol. Greedy decoding; if an output does not reach `\end{document}`, it is generated again with a mild repetition penalty. The code is never repaired afterwards.
+| Page layout | Pages | Compile | Mean fidelity |
+|---|---:|---:|---:|
+| One column, default margins | 111 | 91 | 0.75 |
+| One column, custom geometry | 169 | 141 | 0.77 |
+| One column with figures or tables | 47 | 36 | 0.60 |
+| Two columns | 73 | 61 | 0.72 |
+| **All pages** | **400** | **329** | **0.74** |
+{: .rx-table}
 
-<table class="rx-table">
-  <thead><tr><th></th><th class="n">Previous (3B)</th><th class="n">ReTeX (8B)</th><th class="n">Difference [95% CI]</th></tr></thead>
-  <tbody>
-    <tr><td><b>All pages</b> · fid_v3_all</td><td class="n">0.689</td><td class="n"><b>0.790</b></td><td class="n">+0.101 [+0.061, +0.140]</td></tr>
-    <tr><td>Compiles</td><td class="n">325 / 400</td><td class="n"><b>362 / 400</b></td><td class="n">+37</td></tr>
-    <tr><td>B1 · one column</td><td class="n">0.705</td><td class="n">0.807</td><td class="n">+0.102 [+0.025, +0.178]</td></tr>
-    <tr><td>B2 · custom geometry</td><td class="n">0.757</td><td class="n">0.832</td><td class="n">+0.075 [+0.023, +0.126]</td></tr>
-    <tr><td>B3 · figures and tables</td><td class="n">0.516</td><td class="n">0.672</td><td class="n">+0.156 [+0.033, +0.280]</td></tr>
-    <tr><td>B4 · two columns</td><td class="n">0.618</td><td class="n">0.744</td><td class="n">+0.126 [+0.024, +0.228]</td></tr>
-  </tbody>
-</table>
-<p class="rx-caption">Confidence intervals from a paired bootstrap over pages. The comparison was run once on this benchmark, with the decision criterion written before generation. On a separate development set of 400 other real pages, the gain was +0.113 [+0.073, +0.156].</p>
-
-When the output compiles, the page is usually very close to the original: the median fid_v3 is 0.91. **Most of the remaining gap is compilation.** On the development set, most compilation failures were macros from packages the model forgot to load (`\multirow`, `\mathscr`, `\cites`…).
+When the output compiles, it is usually very close to the original. Most of the remaining gap comes from pages that do not compile and from figures and floats that land in the wrong place.
 
 ## Examples
 
@@ -172,15 +149,14 @@ Real outputs of the model on pages from the benchmark, chosen to show what works
 
 ## What we learned along the way
 
-- **On real pages, the main failure was never finishing the preamble.** Real arXiv preambles are long and full of custom macros. Trained on them as they are, the model learned to keep writing `\newcommand` lines until it ran out of tokens. Rewriting the training preambles into a canonical form that renders the same page removed almost all of these loops (from 120 to 5 truncated outputs out of 400) and was the largest single improvement.
-- **Measure the render, and measure it carefully.** An earlier metric gave a blank page 0.47 and did not penalise an extra duplicated page. Replacing it (fid_v3) changed which experiments looked like progress.
-- **Seeds matter.** Retraining the same recipe with a different seed moves the score by up to about ±0.05, so every comparison is paired, has a confidence interval, and has a decision criterion written before the run.
+- **On real pages, the main failure was never finishing the preamble.** Real arXiv preambles are long and full of custom macros, and the model learned to keep writing `\newcommand` lines until it ran out of tokens. Rewriting the training preambles into a canonical form that renders the same page removed almost all of these loops.
+- **Measure the render, and measure it carefully.** An earlier metric gave a blank page 0.47. Replacing it changed which experiments looked like progress.
 
-## Limitations and next steps
+## Next steps
 
-- **Placement is the next bottleneck**, especially for floats and two-column pages: the text is right, but it does not always land where it should.
-- Pages are handled one at a time. Multi-page documents, bibliographies and cross-references are future work.
-- The next phase is **reinforcement learning with the compiler in the loop**, using fid_v3 on the compiled page as the reward.
+- **Placement**, especially for figures and two-column pages: the text is usually right, but it does not always land where it should.
+- **Reinforcement learning with the compiler in the loop**, using the fidelity of the compiled page as the reward.
+- Multi-page documents.
 
 ## Demo
 

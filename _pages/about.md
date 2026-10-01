@@ -6,7 +6,7 @@ subtitle: PhD candidate in AI at <a href='https://www.uam.es'>Universidad Autón
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_hero.jpg
   image_circular: false # crops the image to make it circular
   more_info: #>
     #<p> Dani: living that Swiss mountain life.</p>
@@ -25,15 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I work on **vision-language models for document intelligence**: turning pages into structured text and code.
+I'm a PhD candidate in Artificial Intelligence at the **Universidad Autónoma de Madrid**, advised by Julian Fierrez and Aythami Morales, and currently a visiting researcher with the [Docling](https://github.com/docling-project/docling) team at **IBM Research Zurich**.
 
-- **Now (Sep–Dec 2026):** Visiting Researcher with the [Docling](https://github.com/docling-project/docling) team at **IBM Research – Zurich**, hosted by Peter Staar. I contribute to Docling and work on research projects around it, including a VLM that links form fields to their values.
-- **Side project:** [ReTeX]({{ '/projects/retex/' | relative_url }}), a vision-language model that turns images of document pages into LaTeX source.
-- **2025:** Visiting Researcher at **IBM Research / MIT-IBM Watson AI Lab** (New York), hosted by Pin-Yu Chen. I built **AIdocFactory**, a 35K-page benchmark of AI-edited documents, and **AIdocDetector**, a 256M-parameter VLM that finds and segments the edited regions. IBM filed a patent application on the method.
-- **PhD:** at the BiometricsAI Lab (UAM), advised by Julian Fierrez and Aythami Morales, on *auditing AI models*. I introduced the **Membership Inference Test (MINT)**, which checks whether given data was used to train a model, for images, text and vision-language models, and built the public tool [ai-mintest.org](https://ai-mintest.org).
+I work on **vision-language models for documents**: turning pages into structured text and code, and telling which parts of a document were written or edited by AI. My PhD is about **auditing AI models**: I introduced the *Membership Inference Test* (MINT), which checks whether given data was used to train a model.
 
-16 peer-reviewed papers, 9 as first author, including ICCV 2025 and IEEE Access. Our team finished **1st of 26** in the DeepID Challenge on forged ID documents at ICCV 2025.
-
-I'm always open to new AI topics and collaborations 🚀
-
-When I'm not training models, I'm probably traveling, watching football, or climbing 😄
+So far: 16 peer-reviewed papers, 9 as first author, including ICCV and IEEE Access, and a patent application filed by IBM. When I'm not training models, I'm probably traveling, watching football, or climbing.

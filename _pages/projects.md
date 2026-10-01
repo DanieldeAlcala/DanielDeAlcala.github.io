@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Some of my project sites. Because life is too short to only look at GitHub repos, these actually have a face!
+description: Research projects and a few things I built along the way.
 nav: true
 nav_order: 3
 display_categories: [work, fun]

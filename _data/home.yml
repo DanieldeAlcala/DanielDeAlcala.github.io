@@ -1,0 +1,84 @@
+# Content of the home page (_layouts/about.liquid). Edit here, not in the layout.
+
+role: PhD Candidate in Artificial Intelligence
+
+affiliations:
+  - logo: uam.svg
+    text: BiometricsAI Lab · <a href="https://www.uam.es">Universidad Autónoma de Madrid</a>
+  - logo: ibm.svg
+    text: Visiting Researcher · <a href="https://github.com/docling-project/docling">Docling team</a> · IBM Research Zurich
+
+links:
+  - { label: Email, icon: fa-solid fa-envelope, url: "mailto:danieldealcalavalcarcel@gmail.com" }
+  - { label: Scholar, icon: fa-solid fa-graduation-cap, url: "https://scholar.google.com/citations?user=oAUImYwAAAAJ" }
+  - { label: GitHub, icon: fa-brands fa-github, url: "https://github.com/DanieldeAlcala" }
+  - { label: LinkedIn, icon: fa-brands fa-linkedin, url: "https://www.linkedin.com/in/daniel-dealcala" }
+  - { label: CV, icon: fa-solid fa-file-lines, url: "/assets/pdf/CV.pdf" }
+
+tags:
+  - Vision-Language Models
+  - Document Intelligence
+  - Image-to-Code Generation
+  - AI-Generated Content Detection
+  - Membership Inference
+  - Trustworthy AI
+  - Computer Vision
+
+projects:
+  - title: ReTeX
+    status: In progress
+    img: /assets/img/projects/retex.jpg
+    url: /projects/retex/
+    text: A vision-language model that reads the image of a page and writes LaTeX that compiles back into the same page. 0.74 mean fidelity on 400 unseen arXiv pages.
+    tags: [VLM, Image-to-code, LaTeX]
+  - title: DocAI
+    status: Under review · ICLR 2027
+    img: /assets/img/projects/docai.jpg
+    url: /assets/pdf/DocAI_ICLR2027.pdf
+    text: Detecting and localizing AI-edited content in whole documents, with a 35K-page benchmark and a 256M-parameter VLM detector. Built at IBM Research.
+    tags: [Document forensics, VLM]
+  - title: AI-MINTest
+    status: Live
+    img: /assets/img/ai-mintest.png
+    url: https://ai-mintest.org
+    text: A public web tool that checks whether given images or texts were used to train an AI model, based on the Membership Inference Test from my PhD.
+    tags: [Auditing, Privacy, Demo]
+
+experience:
+  - logo: ibm.svg
+    org: IBM Research – Zurich
+    role: Visiting Researcher, Docling team
+    host: hosted by Peter Staar
+    date: Sep – Dec 2026
+    place: Zurich, Switzerland
+    text: Contributing to Docling, IBM's open-source document conversion toolkit (60K+ GitHub stars), and developing a VLM that links the fields of a form to their values.
+  - logo: ibm.svg
+    org: IBM Research · MIT-IBM Watson AI Lab
+    role: Visiting Researcher
+    host: hosted by Pin-Yu Chen
+    date: Sep – Dec 2025
+    place: New York, USA
+    text: Built DocAIgen, a 35K-page benchmark of AI-edited documents, and DocAIdet, a 256M-parameter VLM that detects and segments the edited regions, above GPT-5.2, Gemini 3 Flash and Claude Opus 4.5 used as detectors. IBM filed a patent application on the method.
+  - logo: uam.svg
+    org: BiometricsAI Lab, Universidad Autónoma de Madrid
+    role: PhD Researcher and FPU Fellow
+    host: advised by Julian Fierrez and Aythami Morales
+    date: Jan 2022 – present
+    place: Madrid, Spain
+    text: Introduced the Membership Inference Test (MINT) for auditing the training data of image and text models.
+
+education:
+  - logo: uam.svg
+    degree: Ph.D. in Telecommunications and Computer Engineering
+    org: Universidad Autónoma de Madrid
+    date: 2022 – expected early 2027
+    text: "Thesis: Auditing Artificial Intelligence: Membership Inference and Methods for Transparent, Fair and Trustworthy AI."
+  - logo: uam.svg
+    degree: M.Sc. in Deep Learning for Audio and Video Signal Processing
+    org: Universidad Autónoma de Madrid
+    date: 2020 – 2021
+  - logo: uam.svg
+    degree: B.Sc. in Telecommunications Engineering
+    org: Universidad Autónoma de Madrid
+    date: 2016 – 2020
+    text: Ranked 1st in the graduating class, with 8 Matrículas de Honor.

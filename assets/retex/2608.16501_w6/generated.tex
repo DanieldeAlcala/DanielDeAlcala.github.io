@@ -1,52 +1,63 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
-\usepackage{bm}
+\usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{caption}
+\usepackage{microtype}
+\usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage{authblk}
 
+\geometry{margin=2.3cm}
 \hypersetup{
   colorlinks=true,
   linkcolor=blue!50!black,
-  citecolor=blue!50!black,
-  urlcolor=blue!50!black
+  citecolor=green!40!black,
+  urlcolor=blue!60!black,
+  pdftitle={A Quantum Fourier Transform for Continuous-Variable Quantum Key Distribution},
+  pdfauthor={Yong Jia and Xiaoxiang You},
 }
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{proposition}{Proposition}[section]
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\eps}{\varepsilon}
-\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\ii}{\mathrm{i}}
 
-\title{Symmetry, Defects, and Resonant Splittings in the\\
-2D Next-Hardest Lattice Coulomb Problem}
-\author{Jin Lei\,\thanks{\texttt{jinlei@msu.edu}}\\
-\small Department of Physics, Michigan State University, MI 48824, USA\\
-\small \href{https://orcid.org/0009-0005-2832-2887}{ORCID: 0009-0005-2832-2887}}
-\date{June 6, 2026}
+\title{\textbf{A Quantum Fourier Transform for Continuous-Variable\\
+Quantum Key Distribution}}
+
+\author[1]{Yong Jia}
+\author[2]{Xiaoxiang You}
+
+\affil[1]{School of Information Science and Technology, University of Science and Technology of China}
+\affil[2]{School of Mathematical Sciences, University of Science and Technology of China}
+
+\date{}
 
 \begin{document}
 \begin{table}[t]
 \centering
 \caption{The two exceptional moduli compared. $c$ is the coordination number of the deep hole, which fixes the dimension of the lowest manifold.}
 \label{tab:moduli}
-\begin{tabular}{lll}
+\small
+\begin{tabular}{@{}lll@{}}
 \toprule
-& $\tau=i$ (square, $j=1728$) & $\tau=\rho$ (hexagonal, $j=0$) \\
+& $\tau=\ii$ (square, $j=1728$) & $\tau=\rho$ (hexagonal, $j=0$) \\
 \midrule
-Unit group $\mathrm{Aut}^+(Q_\tau)$ & cyclic of order 4 & cyclic of order 6 \\
+Unit group $\operatorname{Aut}^+(Q_\tau)$ & cyclic of order $4$ & cyclic of order $6$ \\
 Relevant rotation & $S_4$, quarter turn & $S_3=S_6^2$, $120^\circ$ \\
-Deep hole(s) & $(1/2,1/2)$ & $(1/3,2/3)$, $(2/3,1/3)$ \\
+Deep hole(s) & $(1/2,1/2)$ & $(1/3,2/3),\ (2/3,1/3)$ \\
 $\delta_\tau$ & $1/2$ & $4/9$ \\
 Coordination $c$ & $4$ & $3$ \\
-Next shell & $5/2$ (multiplicity 8) & $16/9$ (multiplicity 3) \\
-Shell gap & $2\kappa^2$ & $\frac{4}{9}\kappa^2$ \\
+Next shell & $5/2$ (multiplicity $8$) & $16/9$ (multiplicity $3$) \\
+Shell gap & $2\kappa^2$ & $\frac{4}{3}\kappa^2$ \\
 Determinant $D_\tau$ & $2$ () & $\sqrt{3}$ () \\
-Susceptibility $\mathcal{K}$ & $2\pi I_2$ & $\dfrac{2\pi}{\sqrt{3}}\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$ \\
+Susceptibility $\mathcal K$ & $2\pi I_2$ & $\frac{2\pi}{\sqrt{3}}\left(-\frac{2}{-1}-\frac{-1}{2}\right)$ \\
 Natural encoding & dual-rail qubit after a selector & qutrit, no selector needed \\
 \bottomrule
 \end{tabular}
@@ -54,34 +65,39 @@ Natural encoding & dual-rail qubit after a selector & qutrit, no selector needed
 
 \subsection{Ideal round benchmark (square case only)}
 
-\begin{proposition}\label{prop:round}
+\begin{proposition}
+\label{prop:round}
 The lowest eigenvalue of  is maximized uniquely at $a=(1/2,1/2)$, where for $\mu=0$ the two lowest distinct shells are $3/R^2$ (fourfold) and $8/R^2$, with separation $5/R^2$.
 \end{proposition}
 
 \begin{proof}
-$\ell_0(a)=\mathrm{dist}(u,\Z)+\mathrm{dist}(v,\Z)\le1$ with equality only at the antiperiodic point, and $\ell\mapsto\ell(\ell+2)$ is increasing.
+$t_0(a)=\operatorname{dist}(u,\Z)+\operatorname{dist}(v,\Z)\leq 1$ with equality only at the antiperiodic point, and $\ell\mapsto \ell(\ell+2)$ is increasing.
 \end{proof}
 
-This model minimizes an $\ell^1$ quantity, not a quadratic form, so neither  nor  is used: the optimum is the elementary maximization of $\mathrm{dist}(u,\Z)+\mathrm{dist}(v,\Z)$. It has no hexagonal analogue. Its gaps are properties of the Friedrichs extension at the two singular axes; other self-adjoint extensions exist, and a finite core interpolates, so the numbers are idealized benchmarks.
+This model minimizes an $\ell^1$ quantity, not a quadratic form, so neither nor  is used: the optimum is the elementary maximization of $\operatorname{dist}(u,\Z)+\operatorname{dist}(v,\Z)$. It has no hexagonal analogue. Its gaps are properties of the Friedrichs extension at the two singular axes; other self-adjoint extensions exist, and a finite core interpolates, so the numbers are idealized benchmarks.
 
 \section{Measurable predictions}
-\label{sec:meas}
+\label{sec:predictions}
 
 The determinant of  is a collective one-loop quantity and is not a laboratory observable; we therefore do not propose it as a test. The measurable content is the resonance-frequency pattern.
 
-\begin{proposition}[Linear splitting, stationary centroid]\label{prop:split}
+\begin{proposition}[Linear splitting, stationary centroid]
+\label{prop:splitting}
 Let $a_0$ be a deep hole of $Q_\tau$ with nearest offsets $w_i=k_i+a_0$, $i=1,\ldots,c$, and let $a=a_0+\eps$. Then, exactly,
-\begin{equation}\label{eq:split}
+\begin{equation}
 Q_\tau(w_i+\eps)=\delta_\tau+2\,w_i^TG_\tau^{-1}\eps+Q_\tau(\eps),
+\label{eq:splitting}
 \end{equation}
 so the manifold splits linearly. If, in addition, $\sum_i w_i=0$, as at the square and hexagonal symmetry-fixed deep holes, the centroid obeys
-\begin{equation}\label{eq:centroid}
-\overline{Q}=\delta_\tau+Q_\tau(\eps),\qquad \Hess\overline{Q}=2\,G_\tau^{-1}.
+\begin{equation}
+\overline Q=\delta_\tau+Q_\tau(\eps),\qquad \operatorname{Hess}\,\overline Q=2\,G_\tau^{-1}.
+\label{eq:centroid}
 \end{equation}
-These branches are the $c$ lowest eigenvalues provided $\|\eps\|_{Q_\tau}<\tfrac12(\sqrt{\delta^{(2)}}-\sqrt{\delta_\tau})$, where $\delta^{(2)}$ is the next shell value; for $\tau=i$ the sharp condition is
-\begin{equation}\label{eq:sharp}
+These branches are the $c$ lowest eigenvalues provided $\|\eps\|_{Q_\tau}<\tfrac12(\sqrt{\delta^{(2)}}-\sqrt{\delta_\tau})$, where $\delta^{(2)}$ is the next shell value; for $\tau=\ii$ the sharp condition is
+\begin{equation}
 2|\eps_u|+|\eps_v|<1\quad\text{and}\quad |\eps_u|+2|\eps_v|<1,
+\label{eq:sharp}
 \end{equation}
-for which $Q=\tfrac12\pm\eps_u\pm\eps_v+\eps_u^2+\eps_v^2$ with independent signs. In the round model the four lowest eigenvalues are $(1+s)(3+s)/R^2$ with $s=\pm\eps_u\pm\eps_v$, and $\overline{\lambda}=(3+\eps_u^2+\eps_v^2)/R^2$, valid precisely for $|\eps_u|+|\eps_v|<1/2$.
+for which $Q=\tfrac12\pm\eps_u\pm\eps_v+\eps_u^2+\eps_v^2$ with independent signs. In the round model the four lowest eigenvalues are $(1+s)(3+s)/R^2$ with $s=\pm\eps_u\pm\eps_v$, and $\tilde\lambda=(3+\eps_u^2+\eps_v^2)/R^2$, valid precisely for $|\eps_u|+|\eps_v|<1/2$.
 \end{proposition}
 \end{document}

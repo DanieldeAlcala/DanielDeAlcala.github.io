@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: DanielDeAlcala # the website title (if blank, full name will be used instead)
+title: Daniel DeAlcala # the website title (if blank, full name will be used instead)
 first_name: Daniel
 middle_name: 
 last_name: DeAlcala
@@ -11,15 +11,15 @@ contact_note:
   daniel.dealcala@uam.es
   linkedin Daniel DeAlcala
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  PhD in Computer Vision focused on security and model interpretability, working across multiple data modalities and adaptable to diverse AI challenges.
+  Daniel DeAlcala, PhD candidate in AI at Universidad Autónoma de Madrid and visiting researcher at IBM Research Zurich. Vision-language models for documents, AI-generated content detection and auditing AI models.
 footer_text: >
-keywords: AI, ML,  Computer Vision, Fairness, Security # add your own keywords or leave empty
+keywords: AI, vision-language models, document AI, computer vision, membership inference, trustworthy AI # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🤖 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://DanielDeAlcala.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: false # set to true if you want to display last updated in the footer
+last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
@@ -46,14 +46,14 @@ repo_trophies:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: false
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1000px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -315,6 +315,7 @@ filtered_bibtex_keywords:
     preview,
     selected,
     slides,
+    tldr,
     supp,
     video,
     website,
@@ -438,7 +439,7 @@ third_party_libraries:
     version: "5.5.0"
   google_fonts:
     url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
+      fonts: "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
   highlightjs:
     integrity:
       css:

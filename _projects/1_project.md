@@ -1,9 +1,9 @@
 ---
 layout: page
 title: AI-MINTest
-description: AI-MINTest — Membership Inference Test. External project link.
+description: A public web tool that checks whether given images or texts were used to train an AI model.
 img: assets/img/ai-mintest.png
-importance: 1
+importance: 2
 category: work
 redirect: https://ai-mintest.org/
 related_publications: true

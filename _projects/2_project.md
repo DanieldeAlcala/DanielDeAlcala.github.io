@@ -1,7 +1,7 @@
 ---
 layout: page
 title: DP Garage 
-description: DP Garage — small hobby web.
+description: A small web project of mine, outside research.
 img: assets/img/dpgar.png
 importance: 2
 category: fun

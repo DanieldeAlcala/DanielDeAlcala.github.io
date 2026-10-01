@@ -1,7 +1,7 @@
 ---
 layout: cv
 permalink: /cv/
-title: cv
+title: CV
 description: My professional and academic record. The complete CV is available for download in PDF format by clicking the PDF icon.
 nav: true
 nav_order: 5

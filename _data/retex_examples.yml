@@ -1,12 +1,12 @@
-# ReTeX gallery: outputs of the confirmed model (Qwen3-VL-8B + LoRA, run r2q_8b_canon) on realbench_v1,
-# regenerated with the benchmark's own compile path. Only CC BY 4.0 papers are shown.
-# loss = fid_v3 loss per family (content, graphics, geometry, placement, style); fid_v3 = 1 - sum.
+# ReTeX gallery: outputs of the current model (Qwen2.5-VL-3B + LoRA, canonical preambles; run rb_r2q_v11_canon)
+# on realbench_v1, regenerated with the benchmark's own compile path. Only CC BY 4.0 papers are shown.
+# loss = fid_v3 loss per family; fid_v3 = 1 - sum.
 - id: 2608.22291_w6
   label: Dense math
   kind: good
-  band: "B2 · one column, custom geometry"
-  fid: "0.990"
-  loss: {content: "0.007", graphics: "0.000", geometry: "0.003", placement: "0.000", style: "0.000"}
+  band: "One column, custom geometry"
+  fid: "0.991"
+  loss: {content: "0.007", graphics: "0.000", geometry: "0.002", placement: "0.000", style: "0.000"}
   note: Theorem environments, aligned equations and an inline sum are reproduced almost exactly.
   paper: "The Partition Pairing Theorems I"
   authors: "G. Andrews, M. Ghosh Dastidar"
@@ -14,77 +14,57 @@
 - id: 2607.21454_w3
   label: Two columns
   kind: good
-  band: "B4 · two columns"
-  fid: "0.998"
-  loss: {content: "0.000", graphics: "0.000", geometry: "0.000", placement: "0.001", style: "0.000"}
+  band: "Two columns"
+  fid: "0.993"
+  loss: {content: "0.001", graphics: "0.000", geometry: "0.000", placement: "0.005", style: "0.000"}
   note: "A full two-column page: every word lands in the right column and line, section headings included."
   paper: "Rack-integrated quantum dot-based source of single and entangled photons at telecom C-band"
   authors: "M. Vyvlecka, R. Joos, B. Breiholz et al."
   arxiv: 2607.21454
-- id: 2609.07242_w3
-  label: Two columns + plots
-  kind: good
-  band: "B4 · two columns"
-  fid: "0.950"
-  loss: {content: "0.016", graphics: "0.000", geometry: "0.013", placement: "0.021", style: "0.000"}
-  note: Two stacked figures with captions inside a two-column page with display math. Small vertical drift in the right column.
-  paper: "Hudson's theorem fails for the SU(1,1) discrete series"
-  authors: "C.-F. Kam"
-  arxiv: 2609.07242
-- id: 2607.28663_w11
-  label: Figure and caption
-  kind: good
-  band: "B3 · one column with floats"
-  fid: "0.974"
-  loss: {content: "0.002", graphics: "0.000", geometry: "0.006", placement: "0.011", style: "0.007"}
-  note: The float is sized and placed correctly, and the caption and the bold run-in paragraph are kept.
-  paper: "NeuroSynth: A Biologically Inspired Continual Reinforcement Learning Architecture for Mitigating Catastrophic Forgetting"
-  authors: "Y. Kini"
-  arxiv: 2607.28663
 - id: 2608.16501_w6
   label: Table and math
   kind: good
-  band: "B3 · one column with floats"
-  fid: "0.955"
-  loss: {content: "0.015", graphics: "0.000", geometry: "0.013", placement: "0.017", style: "0.000"}
+  band: "One column with floats"
+  fid: "0.964"
+  loss: {content: "0.009", graphics: "0.001", geometry: "0.019", placement: "0.007", style: "0.000"}
   note: A two-column table with math in the cells, followed by propositions and numbered equations.
   paper: "Symmetry-Fixed Holonomies and Spectral Isolation in Two-Cycle Photonic Geometries"
   authors: "M. Planat"
   arxiv: 2608.16501
+- id: 2609.07242_w3
+  label: Two columns + plots
+  kind: good
+  band: "Two columns"
+  fid: "0.906"
+  loss: {content: "0.034", graphics: "0.007", geometry: "0.007", placement: "0.038", style: "0.009"}
+  note: The two plots, their caption and the equations are reproduced, but the column break falls in a different place, so some text changes column.
+  paper: "Hudson's theorem fails for the SU(1,1) discrete series"
+  authors: "C.-F. Kam"
+  arxiv: 2609.07242
 - id: 2607.15043_w5
   label: Figure in a column
   kind: good
-  band: "B4 · two columns"
-  fid: "0.901"
-  loss: {content: "0.012", graphics: "0.016", geometry: "0.005", placement: "0.066", style: "0.000"}
+  band: "Two columns"
+  fid: "0.904"
+  loss: {content: "0.010", graphics: "0.016", geometry: "0.005", placement: "0.065", style: "0.000"}
   note: "Text and figure are right, but the right column starts a few lines too early: a placement error."
   paper: "Derivation and application of a general scaling relation between the dc and asymptotic high-frequency optical Hall responses"
   authors: "E. Abelev, R. Romero, N. P. Armitage"
   arxiv: 2607.15043
-- id: 2609.13888_w1
-  label: Drawn graph
+- id: 2607.28663_w11
+  label: Figure size
   kind: partial
-  band: "B3 · one column with floats"
-  fid: "0.844"
-  loss: {content: "0.047", graphics: "0.029", geometry: "0.021", placement: "0.042", style: "0.017"}
-  note: The model writes a TikZ drawing for the tadpole graph. The layout is right but the drawing loses its edges.
-  paper: "Independence polynomials and the weak Lefschetz property for tadpole graphs"
-  authors: "T. Q. Hoa, N. D. Phuoc, T. N. T. Son"
-  arxiv: 2609.13888
-- id: 2609.04606_w2
-  label: "Failure: page geometry"
-  kind: fail
-  band: "B2 · one column, custom geometry"
-  fid: "0.589"
-  loss: {content: "0.007", graphics: "0.000", geometry: "0.140", placement: "0.114", style: "0.149"}
-  note: "All the words are there (recall 0.99), but the model drops the Times font of the original, so every line breaks in a different place and the whole layout drifts."
-  paper: "Transport fidelity and domain of validity of compact Gaussian kinetic representations for rarefied flows"
-  authors: "E. Roohi"
-  arxiv: 2609.04606
+  band: "One column with floats"
+  fid: "0.733"
+  loss: {content: "0.002", graphics: "0.142", geometry: "0.036", placement: "0.087", style: "0.000"}
+  note: The text is complete, but the model draws the plot at 90% of the text width instead of 100%, which shifts the caption and everything below it.
+  paper: "NeuroSynth: A Biologically Inspired Continual Reinforcement Learning Architecture for Mitigating Catastrophic Forgetting"
+  authors: "Y. Kini"
+  arxiv: 2607.28663
 - id: 2609.16108_w7
   label: "Failure: float placement"
   kind: fail
-  band: "B4 · two columns"
+  band: "Two columns"
   fid: "0.570"
   loss: {content: "0.003", graphics: "0.098", geometry: "0.180", placement: "0.143", style: "0.006"}
   note: The text is complete, but the plots end up in different positions and sizes than in the original, which pushes both columns around.
@@ -94,9 +74,9 @@
 - id: 2607.01429_w8
   label: "Failure: figure too large"
   kind: fail
-  band: "B3 · one column with floats"
-  fid: "0.494"
-  loss: {content: "0.033", graphics: "0.317", geometry: "0.123", placement: "0.033", style: "0.000"}
+  band: "One column with floats"
+  fid: "0.495"
+  loss: {content: "0.031", graphics: "0.317", geometry: "0.123", placement: "0.034", style: "0.000"}
   note: "The original figure is a TikZ drawing; the model writes an external image instead (grey placeholder) that is too large and spills the page onto a second one."
   paper: "A condition for the identification of multivariate models with binary instruments"
   authors: "F. Gunsilius"

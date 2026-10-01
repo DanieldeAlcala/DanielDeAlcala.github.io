@@ -1,33 +1,25 @@
-\documentclass[aps,prx,twocolumn,showpacs,superscriptaddress,floatfix,longbibliography,10pt]{revtex4-2}
+\documentclass[aps,prb,twocolumn,superscriptaddress,longbibliography]{revtex4-2}
 
-\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\usepackage{bm}
 \usepackage{hyperref}
 \usepackage{mathtools}
-\usepackage{amsthm}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    citecolor=blue,
-}
 
 \begin{document}
-As predicted by cluster mean-field theory, this re-entrant paramagnetic regime is susceptible to finite-momentum instabilities, making it vulnerable to incommensurate orderings. The stability analysis of Ref.~ shows that once short-range correlations are included, the paramagnetic steady state can develop an unstable mode at nonzero momenta $q$, indicating a susceptibility toward incommensurate behavior. Our hardware simulations exhibit clear signatures of this effect at several points in the $(J_x,J_y)$ grid, as highlighted in the corners of Fig.~. Interestingly, this appearance of incommensurate peaks is highly sensitive to the Trotter step size $\Delta t$. Because the Trotterization modifies the effective Liouvillian, small changes in $\Delta t$ can act as a perturbation that either preserves the paramagnetic character or pushes the system across the finite-momentum instability boundary (see also App.~). As can be seen in Fig.~, at $\Delta t=0.2$ the system remains largely paramagnetic, with only a weak residual ferromagnetic component. Increasing the step size to $\Delta t=0.3$ alters the effective dynamics enough to trigger the finite-momentum instability predicted by CMF theory, resulting in the emergence of clear incommensurate peaks. This behavior is consistent with the picture that the re-entrant paramagnet lies close to an instability boundary, and modest perturbations to the Liouvillian can determine whether the system remains in the mixed paramagnetic state or develops short-range incommensurate structure.
+As predicted by cluster mean-field theory, this re-entrant paramagnetic regime is susceptible to finite-momentum instabilities, making it vulnerable to incommensurate orderings. The stability analysis of Ref.~ shows that once short-range correlations are included, the paramagnetic steady state can develop an unstable mode at nonzero momenta $q$, indicating a susceptibility toward incommensurate behavior. Our hardware simulations exhibit clear signatures of this effect at several points in the $(J_x, J_y)$ grid, as highlighted in the corners of Fig.~. Interestingly, this appearance of incommensurate peaks is highly sensitive to the Trotter step size $\Delta t$. Because the Trotterization modifies the effective Liouvillian, small changes in $\Delta t$ can act as a perturbation that either preserves the paramagnetic character or pushes the system across the finite-momentum instability boundary (see also App.~). As can be seen in Fig.~, at $\Delta t = 0.2$ the system remains largely paramagnetic, with only a weak residual ferromagnetic component. Increasing the step size to $\Delta t = 0.3$ alters the effective dynamics enough to trigger the finite-momentum instability predicted by CMF theory, resulting in the emergence of clear incommensurate peaks. This behavior is consistent with the picture that the re-entrant paramagnet lies close to an instability boundary, and modest perturbations to the Liouvillian can determine whether the system remains in the mixed paramagnetic state or develops short-range incommensurate structure.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.95\linewidth]{Figures/SDW_4-2.pdf}
-    \caption{Static structure factor $S(q)$ at the unstable re-entrant paramagnetic phase for two different values of time step $\Delta t$. Simulated system is a periodic chain with $L=40$ sites, with coupling amplitudes $(J_x,J_y)=(4,-2)$ and dissipative rate $\gamma=J_z=1$.}
-    \label{fig:SDW_4-2}
+    \includegraphics[width=0.95\linewidth]{figures/fig4.pdf}
+    \caption{Static structure factor $S(q)$ at the unstable re-entrant paramagnetic phase for two different values of time step $\Delta t$. Simulated system is a periodic chain with $L=40$ sites, with coupling amplitudes $(J_x, J_y) = (4, -2)$ and dissipative rate $\gamma = J_z = 1$.}
+    \label{fig:static}
 \end{figure}
 
-Taken together, the hardware results show broad quantitative agreement with the mean-field phase structure while simultaneously reflecting the key corrections introduced by cluster mean-field analysis. Along the $J_x=J_y$ line, we recover the expected paramagnetic behavior, but the ``widening'' of this region to nearby points predicted by mean-field does not appear. The SDW regions exhibit the correct directional structure, though only one of the two mean-field SDW wedges is recovered in each corner. Along the $J_y=4$ and $-4$ lines, the hardware also shows faint SDW structure on the opposite side of the paramagnetic line, however these features are much less pronounced than the primary SDW wedges and do not form a full second wedge. Ferromagnetic and anti-ferromagnetic features are present as well, but their spatial extent is significantly reduced. The emergence of re-entrant paramagnetic behavior at large couplings, with the appearance of finite-momentum instabilities and the sensitivity of incommensurate peaks to $\Delta t$, further underscores that the hardware is probing the same dynamical mechanisms responsible for the modified topology of the CMF phase diagram~. Overall, the hardware simulations reproduce the qualitative landscape of the dissipative Heisenberg model while exhibiting the distortions, suppressions, and instabilities expected once short-range correlations and finite-size effects are properly taken into account.
+Taken together, the hardware results show broad quantitative agreement with the mean-field phase structure while simultaneously reflecting the key corrections introduced by cluster mean-field analysis. Along the $J_x = J_y$ line, we recover the expected paramagnetic behavior, but the ``widening'' of this region to nearby points predicted by mean-field does not appear. The SDW regions exhibit the correct directional structure, though only one of the two mean-field SDW wedges is recovered in each corner. Along the $J_y = 4$ and $-4$ lines, the hardware also shows faint SDW structure on the opposite side of the paramagnetic line, however these features are much less pronounced than the primary SDW wedges and do not form a full second wedge. Ferromagnetic and anti-ferromagnetic features are present as well, but their spatial extent is significantly reduced. The emergence of re-entrant paramagnetic behavior at large couplings, with the appearance of finite-momentum instabilities and the sensitivity of incommensurate peaks to $\Delta t$, further underscores that the hardware is probing the same dynamical mechanisms responsible for the modified topology of the CMF phase diagram~. Overall, the hardware simulations reproduce the qualitative landscape of the dissipative Heisenberg model while exhibiting the distortions, suppressions, and instabilities expected once short-range correlations and finite-size effects are properly taken into account.
 
 \section{Exact simulations for small system sizes}
-\label{sec:exact}
+\label{app:exact}
 
 We discuss exact diagonalization results for various observables using the Liouvillian dynamics of a periodic spin chain with $L=12$ sites. The results presented in this section are used to compare the hardware results in the main text and tensor network formulation results that are discussed in the following section.
 \end{document}

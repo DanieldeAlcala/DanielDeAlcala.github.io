@@ -70,7 +70,7 @@
 - title: Awards
   type: time_table
   contents:
-    - title: 1st place of 26 teams, DeepID Challenge (both tracks)
+    - title: Best score on the private test set (20K real ID documents), DeepID Challenge
       institution: ICCV 2025
       year: 2025
     - title: FPU Fellowship (FPU21/05785)

@@ -5,11 +5,16 @@
 
 @inproceedings{dealcala2025AIdoc,
   title={{DocAI: Detecting and Localizing AI-Edited Content in Documents}},
-  author={DeAlcala, Daniel and Ching-Yun, Ko and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Pin-Yu Chen},
+  author={DeAlcala, Daniel and Ko, Ching-Yun and Morales, Aythami and Fierrez, Julian and Tolosana, Ruben and Chen, Pin-Yu},
   booktitle={Under review at the International Conference on Learning Representations (ICLR 2027)},
   year={2026},
   pdf = {DocAI_ICLR2027.pdf},
-  selected = {true}
+  selected = {true},
+  abbr = {Under review},
+  tldr = {DocAIgen rewrites paragraphs, figures and tables of real PDFs with any generative model to build a 35K-page benchmark; DocAIdet, a 256M-parameter VLM, detects and localizes the AI-edited regions.},
+  bibtex_show = {true},
+  preview = {dealcala2025AIdoc.jpg},
+  code = {https://anonymous.4open.science/r/DocAIDetector-510E/README.md}
 }
 
 @inproceedings{mancera2025my,
@@ -19,7 +24,10 @@
   pages={3594--3602},
   year={2026},
   pdf = {IsMyText.pdf},
-  selected = {true}
+  abbr = {IEEE CAI 2026},
+  tldr = {Gradient-based membership inference for language models: across 7 Transformer models and 2.5M sentences, AUC 0.85 to 0.99.},
+  bibtex_show = {true},
+  preview = {mancera2025my.jpg}
 }
 
 @inproceedings{dealcala2026mintdemo2,
@@ -28,7 +36,11 @@
   booktitle={IEEE Annual Computers, Software, and Applications Conference (COMPSAC)},
   year={2026},
   pdf = {MINT_Demo_2.pdf},
-  website = {https://ai-mintest.org}
+  website = {https://ai-mintest.org},
+  abbr = {COMPSAC 2026},
+  tldr = {A public web platform that audits image and text models (MINT, aMINT, gMINT), with up to 90% accuracy in detecting training data.},
+  bibtex_show = {true},
+  preview = {dealcala2026mintdemo2.jpg}
 }
 
 @article{mancera2026loramint,
@@ -37,21 +49,31 @@
   journal={arXiv preprint arXiv:2606.06946},
   year={2026},
   arxiv = {2606.06946},
-  pdf = {LoRA-MINT.pdf}
+  pdf = {LoRA-MINT.pdf},
+  abbr = {arXiv 2026},
+  tldr = {Membership inference for LLMs fine-tuned with LoRA, based on perplexity: precision 0.77 to 0.92 across 4 models and 3 datasets.},
+  bibtex_show = {true},
+  preview = {mancera2026loramint.jpg}
 }
 
 @inproceedings{lopezduran2026docvqa,
   title={Comparative Study of Domain-adapted VLMs for General Document Visual Question Answering},
   author={Lopez-Duran, Marta and Marrero, E. and Fierrez, Julian and Robledo-Moreno, M. and Vera-Rodriguez, Ruben and DeAlcala, Daniel and Morales, Aythami and Tolosana, Ruben and Delgado, O. and Ortigosa, Alvaro and Ortega-Garcia, Javier},
   booktitle={International Conference on Document Analysis and Recognition (ICDAR) Workshops},
-  year={2026}
+  year={2026},
+  abbr = {ICDAR-W 2026},
+  tldr = {A comparison of domain-adapted vision-language models for general document visual question answering.},
+  bibtex_show = {true}
 }
 
 @inproceedings{lopezduran2026crimener,
   title={CrimeNER Demo: Named-Entity Recognition in the Crime Domain},
   author={Lopez-Duran, Marta and Fierrez, Julian and Morales, Aythami and DeAlcala, Daniel and Mancera, Gonzalo and Irigoyen, J. and Tolosana, Ruben and Delgado, O. and Jurado, Francisco and Ortigosa, Alvaro},
   booktitle={International Conference on Document Analysis and Recognition (ICDAR) Workshops},
-  year={2026}
+  year={2026},
+  abbr = {ICDAR-W 2026},
+  tldr = {A demonstrator for named-entity recognition in crime-domain documents.},
+  bibtex_show = {true}
 }
 
 @inproceedings{dealcala2025active,
@@ -61,16 +83,25 @@
   pages={647--656},
   year={2025},
   pdf = {Active.pdf},
-  selected = {true}
+  selected = {true},
+  abbr = {ICCV 2025},
+  tldr = {Active MINT trains the model and its auditor together, so training-data membership can be verified later: above 80% accuracy from MobileNet to ViT.},
+  bibtex_show = {true},
+  preview = {dealcala2025active.jpg},
+  code = {https://github.com/DanieldeAlcala/Membership-Inference-Test}
 }
 
 @inproceedings{korshunov2025deepid,
   title={DeepID Challenge of Detecting Synthetic Manipulations in ID Documents},
-  author={Korshunov, Pavel, et. al.},
+  author={Korshunov, Pavel and others},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
   pages={510--519},
   year={2025},
-  pdf = {DeepId.pdf}
+  pdf = {DeepId.pdf},
+  abbr = {ICCV 2025},
+  tldr = {Challenge on detecting synthetic manipulations in ID documents. Our UAM team had the best score of 26 teams on the organisers' private test set of 20K real ID documents.},
+  bibtex_show = {true},
+  preview = {korshunov2025deepid.jpg}
 }
 
 @article{dealcala2025my,
@@ -80,7 +111,12 @@
   year={2025},
   publisher={IEEE},
   pdf = {Is_My_Data.pdf},
-  selected = {true}
+  selected = {true},
+  abbr = {IEEE Access},
+  tldr = {Membership Inference Test (MINT) for face recognition: using model activations, it detects whether a face was in the training set with up to 90% accuracy on 22M+ images.},
+  bibtex_show = {true},
+  preview = {dealcala2025my.jpg},
+  code = {https://github.com/DanieldeAlcala/Membership-Inference-Test}
 }
 
 @inproceedings{dealcala2025attzoom,
@@ -89,7 +125,11 @@
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops},
   pages={4834--4843},
   year={2025},
-  pdf = {ATTZOOM.pdf}
+  pdf = {ATTZOOM.pdf},
+  abbr = {ICCV-W 2025},
+  tldr = {A modular, model-agnostic spatial attention layer for CNNs that consistently improves accuracy on CIFAR-100 and TinyImageNet.},
+  bibtex_show = {true},
+  preview = {dealcala2025attzoom.jpg}
 }
 
 
@@ -99,7 +139,11 @@
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
   pages={2781--2790},
   year={2025},
-  pdf = {gMINT.pdf}
+  pdf = {gMINT.pdf},
+  abbr = {CVPR-W 2025},
+  tldr = {gMINT audits image models from per-sample gradient updates and reaches near-perfect training-data detection in most settings.},
+  bibtex_show = {true},
+  preview = {dealcala2025gmint.jpg}
 }
 
 @article{dealcala2025mint,
@@ -108,14 +152,21 @@
   journal={AAAI Workshop on Artificial Intelligence Governance (AIGOV)},
   year={2025},
   pdf = {MINTDEMO.pdf},
-  website = {https://ai-mintest.org}
+  website = {https://ai-mintest.org},
+  abbr = {AAAI-W 2025},
+  tldr = {The first public MINT demonstrator: experiments on face recognition models and 22M+ images, with up to 89% accuracy.},
+  bibtex_show = {true},
+  preview = {dealcala2025mint.jpg}
 }
 
 @inproceedings{mancera2025objectmint,
   title={Membership Inference Test: Auditing Training Data in Object Classification Models},
   author={Mancera, Gonzalo and DeAlcala, Daniel and Morales, Aythami and Tolosana, Ruben and Fierrez, Julian},
   booktitle={AAAI Workshop on Deployable AI},
-  year={2025}
+  year={2025},
+  abbr = {AAAI-W 2025},
+  tldr = {Membership Inference Test applied to auditing the training data of object classification models.},
+  bibtex_show = {true}
 }
 
 @inproceedings{dealcala2024comprehensive,
@@ -124,7 +175,11 @@
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
   pages={3585--3593},
   year={2024},
-  pdf = {Comprehensive.pdf}
+  pdf = {Comprehensive.pdf},
+  abbr = {CVPR-W 2024},
+  tldr = {Which training factors make membership easier or harder to detect: number of epochs, loss function and dropout, studied on 22M+ face images.},
+  bibtex_show = {true},
+  preview = {dealcala2024comprehensive.jpg}
 }
 
 @inproceedings{dealcala2023measuring,
@@ -134,7 +189,12 @@
   pages={1167--1172},
   year={2023},
   organization={IEEE},
-  pdf = {N-Sigma.pdf}
+  pdf = {N-Sigma.pdf},
+  selected = {true},
+  abbr = {COMPSAC 2023},
+  tldr = {N-Sigma, a statistical method from physics, applied to measuring bias in face recognition models.},
+  bibtex_show = {true},
+  preview = {dealcala2023measuring.jpg}
 }
 
 @inproceedings{dealcala2023becaptcha,
@@ -143,7 +203,11 @@
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
   pages={1051--1060},
   year={2023},
-  pdf = {KEYSTROKE.pdf}
+  pdf = {KEYSTROKE.pdf},
+  abbr = {CVPR-W 2023},
+  tldr = {Synthetic keystroke data generation to train better bot detectors, on 136M keystroke events from 168K subjects.},
+  bibtex_show = {true},
+  preview = {dealcala2023becaptcha.jpg}
 }
 
 
@@ -152,7 +216,11 @@
   author={Daza, Roberto and DeAlcala, Daniel and Morales, Aythami and Tolosana, Ruben and Cobos, Ruth and Fierrez, Julian},
   journal={AAAI Workshop on Artificial Intelligence for Education (AI4EDU)},
   year={2022},
-  pdf = {AlebK.pdf}
+  pdf = {AlebK.pdf},
+  abbr = {AAAI-W 2022},
+  tldr = {Estimating the attention level of students in online sessions from eye blink frequency, with a CNN blink detector.},
+  bibtex_show = {true},
+  preview = {daza2021alebk.jpg}
 }
 
 @article{serna2021ifbid,
@@ -160,7 +228,11 @@
   author={Serna, Ignacio and DeAlcala, Daniel and Morales, Aythami and Fierrez, Julian and Ortega-Garcia, Javier},
   journal={AAAI Workshop on Artificial Intelligence Safety (SafeAI)},
   year={2022},
-  pdf = {IFBID.pdf}
+  pdf = {IFBID.pdf},
+  abbr = {AAAI-W 2022},
+  tldr = {Detecting bias in a neural network by looking only at its weights, without running inference.},
+  bibtex_show = {true},
+  preview = {serna2021ifbid.jpg}
 }
 
 
