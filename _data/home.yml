@@ -6,7 +6,7 @@ affiliations:
   - logo: uam.svg
     text: BiometricsAI Lab · <a href="https://www.uam.es">Universidad Autónoma de Madrid</a>
   - logo: ibm.svg
-    text: Visiting Researcher · <a href="https://github.com/docling-project/docling">Docling team</a> · IBM Research Zurich
+    text: Visiting Researcher · <a href="https://github.com/docling-project">Docling team</a> · IBM Research Zurich
 
 links:
   - { label: Email, icon: fa-solid fa-envelope, url: "mailto:danieldealcalavalcarcel@gmail.com" }

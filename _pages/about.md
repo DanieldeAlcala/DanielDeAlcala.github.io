@@ -25,7 +25,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a PhD candidate in Artificial Intelligence at the **Universidad Autónoma de Madrid**, advised by Julian Fierrez and Aythami Morales, and currently a visiting researcher with the [Docling](https://github.com/docling-project/docling) team at **IBM Research Zurich**.
+I'm a PhD candidate in Artificial Intelligence at the **Universidad Autónoma de Madrid**, advised by Julian Fierrez and Aythami Morales, and currently a visiting researcher with the [Docling](https://github.com/docling-project) team at **IBM Research Zurich**.
 
 I work on **vision-language models for documents**: turning pages into structured text and code, and telling which parts of a document were written or edited by AI. My PhD is about **auditing AI models**: I introduced the *Membership Inference Test* (MINT), which checks whether given data was used to train a model.
 
