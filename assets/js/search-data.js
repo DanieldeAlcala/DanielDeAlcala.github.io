@@ -81,6 +81,11 @@ ninja.data = [{
           description: "A small web project of mine, outside research.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
+            },},{id: "projects-kitate",
+          title: 'Kitate',
+          description: "An Android app of mine that sorts your photos by who is in them. Face recognition runs fully on the phone, with no cloud and no account.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_kitate/";
             },},{
         id: 'social-email',
         title: 'email',
